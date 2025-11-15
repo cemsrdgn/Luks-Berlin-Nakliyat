@@ -1,0 +1,126 @@
+.chooseus-section {
+  padding: 90px 0;
+  background-color: #020f2d;
+}
+
+.chooseus-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .chooseus-inner {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 60px;
+  }
+}
+
+.chooseus-left {
+  color: #fff;
+}
+
+.chooseus-eyebrow {
+  color: #ff5a1f;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.chooseus-title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+}
+
+.chooseus-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 28px;
+}
+
+@media (min-width: 640px) {
+  .chooseus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.chooseus-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.chooseus-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 90, 31, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chooseus-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.chooseus-card h3 {
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+.chooseus-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chooseus-right {
+  position: relative;
+}
+
+.chooseus-image-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.chooseus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.chooseus-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(0, 14, 43, 0.45) 15%, rgba(0, 14, 43, 0) 55%);
+}
+
+@media (min-width: 1024px) {
+  .chooseus-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+  }
+}
+
+

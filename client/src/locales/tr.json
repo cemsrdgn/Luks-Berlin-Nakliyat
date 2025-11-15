@@ -1,0 +1,151 @@
+{
+  "topbar": {
+    "phone": "+44 20 7930 8205",
+    "address": "450 Strand, Charing Cross, London"
+  },
+  "navbar": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetlerimiz",
+    "about": "Hakkımızda",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "getQuote": "Teklif Al"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Profesyonel Nakliye Ağı",
+        "subtitle": "Paketlemeden asansörlü yüklemeye kadar her adımı kendi ekibimiz yönetir."
+      },
+      {
+        "title": "Evden Eve Taşımacılık",
+        "subtitle": "Adresinize gelmeden önce kat, asansör ve park detaylarını planlıyoruz."
+      },
+      {
+        "title": "Proje Taşımacılığı",
+        "subtitle": "Ağır ekipman, fuar ve stand lojistiğinde takip edilen araç filomuzla yanınızdayız."
+      },
+      {
+        "title": "Güvenilir Transfer Çözümleri",
+        "subtitle": "Sözleşmeli SLA, şeffaf fiyatlandırma ve çok dilli koordinatörler."
+      }
+    ],
+    "servicesButton": "HİZMETLERİMİZ"
+  },
+  "whyChooseUs": {
+    "eyebrow": "AVANTAJLARIMIZ",
+    "title": "NEDEN BİZİ SEÇİYORLAR?",
+    "points": [
+      {
+        "title": "Depo Depolama",
+        "body": "Sipariş tender süreci taşımacılığın ilk adımıdır."
+      },
+      {
+        "title": "Güvenli Kargo",
+        "body": "Yükünüz yoldayken ekibimiz takibini ve yönetimini yapar."
+      },
+      {
+        "title": "Kolay Ödeme",
+        "body": "Yük planlandıktan sonra ödeme sürecini biz organize ederiz."
+      },
+      {
+        "title": "Hızlı Teslimat",
+        "body": "Araçlarımız randevuya göre hızla yanaşır veya bırakma yapar."
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "HAKKIMIZDA",
+    "title": "MÜŞTERİLERİMİZ VE RAKAMLARIMIZ",
+    "items": [
+      {
+        "value": "9123",
+        "label": "EKİBİMİZDEKİ PERSONEL",
+        "body": "Planlamadan sahaya kadar tüm süreci yöneten uzman nakliyeciler."
+      },
+      {
+        "value": "70102",
+        "suffix": "km",
+        "label": "HAFTALIK KATEDİLEN KM",
+        "body": "Şehir içi ve şehirler arası tüm rotalar anlık olarak izlenir."
+      },
+      {
+        "value": "1254",
+        "label": "DÜNYA ÇAPINDA MÜŞTERİ",
+        "body": "Berlin’den dünyaya açılan markalar lojistikte bizi tercih ediyor."
+      },
+      {
+        "value": "20254",
+        "label": "TAMAMLANAN PROJE",
+        "body": "Her taşıma sigortalı, belgeli ve planlanan zamanda teslim edilir."
+      }
+    ]
+  },
+  "servicesTabs": {
+    "eyebrow": "HİZMETLER",
+    "title": "Her Taşıma İçin Özel Çözümler",
+    "ctaLabel": "Hizmetlerin tamamını gör",
+    "sections": [
+      {
+        "title": "Yurt İçi Ev & Ofis Taşımacılığı",
+        "description": "Berlin ve çevresinde sigortalı, lift destekli ve paketlemeli taşımacılık.",
+        "image": "images/gallery/1.jpg",
+        "details": [
+          "Tam paketleme ve demontaj hizmeti",
+          "Asansörlü yüksek kat taşımacılığı",
+          "Aynı gün şehir içi transfer",
+          "Teslim sonrası kurulum ve toparlama"
+        ]
+      },
+      {
+        "title": "Yurt Dışı Depolama Hizmetleri",
+        "description": "İklim kontrollü depolar ve gümrüklü alanlarla uluslararası çözümler.",
+        "image": "images/gallery/2.jpg",
+        "details": [
+          "Gümrüklü ve gümrüksüz depo seçenekleri",
+          "Stok yönetim portalı",
+          "Konsolidasyon ve cross-docking",
+          "Kısa ve uzun dönem sözleşmeler"
+        ]
+      },
+      {
+        "title": "Lojistik Destek Hizmetleri",
+        "description": "Proje lojistiği, özel kargo koordinasyonu ve çok dilli saha ekipleri.",
+        "image": "images/gallery/3.jpg",
+        "details": [
+          "Proje planlama ve izin süreçleri",
+          "Fuar, etkinlik ve perakende roll-out desteği",
+          "7/24 takip ve dispatch",
+          "Saha koordinasyonu ve raporlama"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "primary": "LÜKS",
+      "accent": "BERLİN",
+      "suffix": "NAKLİYAT"
+    },
+    "description": "Şehir içi ve şehirler arası taşımacılıkta güvenilir, zamanında ve sigortalı hizmet. Ofis, ev ve parsiyel taşımalar için profesyonel çözümler.",
+    "quickLinksTitle": "Hızlı Bağlantılar",
+    "servicesTitle": "Hizmetler",
+    "contactsTitle": "İletişim",
+    "services": {
+      "intercity": "Şehirler Arası Taşımacılık",
+      "office": "Ofis & Ev Taşıma",
+      "elevator": "Asansörlü Taşıma",
+      "logistics": "Lojistik Çözümler"
+    },
+    "contacts": {
+      "address": "Karl-Marx-Allee 90, 10243 Berlin, DE",
+      "phone": "+49 30 000 00 00",
+      "email": "info@luksberlinnakliyat.com"
+    },
+    "bottom": {
+      "copyright": "© 2025 Lüks Berlin Nakliyat. Tüm hakları saklıdır.",
+      "privacy": "Gizlilik",
+      "terms": "Kullanım Şartları"
+    }
+  }
+}

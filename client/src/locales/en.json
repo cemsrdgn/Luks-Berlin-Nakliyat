@@ -1,0 +1,151 @@
+{
+  "topbar": {
+    "phone": "+44 20 7930 8205",
+    "address": "450 Strand, Charing Cross, London"
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Professional Courier Network",
+        "subtitle": "Packing, lift-assisted loading and insurance managed by our in-house experts."
+      },
+      {
+        "title": "House to House Moving",
+        "subtitle": "We plan every floor, elevator and parking detail before arriving at your address."
+      },
+      {
+        "title": "Project Transportation",
+        "subtitle": "Heavy machinery, stand & fair logistics with tracked vehicles and permits."
+      },
+      {
+        "title": "Reliable Transfer Solutions",
+        "subtitle": "Contract-based SLA, transparent pricing and multilingual coordinators."
+      }
+    ],
+    "servicesButton": "OUR SERVICES"
+  },
+  "whyChooseUs": {
+    "eyebrow": "OUR BENEFIT",
+    "title": "WHY PEOPLE CHOOSE US?",
+    "points": [
+      {
+        "title": "Warehouse Storage",
+        "body": "Order tendering is an initial stage of the transportation process."
+      },
+      {
+        "title": "Security Cargo",
+        "body": "While your freight is in transit, a 3PL tracks and manages it."
+      },
+      {
+        "title": "Easy Payment",
+        "body": "After tendering the load, freight brokers will place your payment."
+      },
+      {
+        "title": "Fast Delivery",
+        "body": "Carrier agrees to spot or drop trailers or vehicles swiftly."
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "ABOUT US",
+    "title": "OUR CLIENTS & COUNTERS",
+    "items": [
+      {
+        "value": "9123",
+        "label": "EMPLOYEES IN TEAM",
+        "body": "Skilled movers, planers and coordinators supporting you end-to-end."
+      },
+      {
+        "value": "70102",
+        "suffix": "km",
+        "label": "KILOMETER TRAVEL WEEKLY",
+        "body": "Long-haul and city routes operated with real-time tracking."
+      },
+      {
+        "value": "1254",
+        "label": "WORLDWIDE CLIENTS",
+        "body": "From Berlin to the globe, brands rely on our logistics network."
+      },
+      {
+        "value": "20254",
+        "label": "PROJECTS DONE",
+        "body": "Every relocation documented, insured and delivered on schedule."
+      }
+    ]
+  },
+  "servicesTabs": {
+    "eyebrow": "SERVICES",
+    "title": "Solutions Tailored To Every Move",
+    "ctaLabel": "Explore all services",
+    "sections": [
+      {
+        "title": "Domestic Home & Office Moving",
+        "description": "Packed, lifted and delivered with insurance tracking throughout Berlin and surrounding cities.",
+        "image": "images/gallery/1.jpg",
+        "details": [
+          "Full packing & disassembly services",
+          "Lift-assisted high floor moving",
+          "Same-day city transfers",
+          "Post-move cleanup and staging"
+        ]
+      },
+      {
+        "title": "International Storage & Warehousing",
+        "description": "Climate controlled depots and bonded storage solutions for global relocations.",
+        "image": "images/gallery/2.jpg",
+        "details": [
+          "Bonded and customs-ready warehouses",
+          "Inventory management portal",
+          "Consolidation and cross-docking",
+          "Long & short term storage contracts"
+        ]
+      },
+      {
+        "title": "Logistics Support Services",
+        "description": "Project logistics, special cargo coordination and on-site supervision with multilingual teams.",
+        "image": "images/gallery/3.jpg",
+        "details": [
+          "Project planning & permitting",
+          "Fairs, events & retail rollout support",
+          "Dedicated dispatch and tracking",
+          "24/7 on-site coordination"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "primary": "LÜKS",
+      "accent": "BERLİN",
+      "suffix": "NAKLİYAT"
+    },
+    "description": "Reliable, on-time and insured moving support for Berlin and all of Germany. Professional solutions for homes, offices and partial loads.",
+    "quickLinksTitle": "Quick Links",
+    "servicesTitle": "Services",
+    "contactsTitle": "Contacts",
+    "services": {
+      "intercity": "Intercity Moving",
+      "office": "Office & Home Moving",
+      "elevator": "Lift-Assisted Moving",
+      "logistics": "Logistics Solutions"
+    },
+    "contacts": {
+      "address": "Karl-Marx-Allee 90, 10243 Berlin, DE",
+      "phone": "+49 30 000 00 00",
+      "email": "info@luksberlinnakliyat.com"
+    },
+    "bottom": {
+      "copyright": "© 2025 Lüks Berlin Nakliyat. All rights reserved.",
+      "privacy": "Privacy",
+      "terms": "Terms of Use"
+    }
+  }
+}

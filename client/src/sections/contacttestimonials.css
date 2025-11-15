@@ -1,0 +1,203 @@
+/* ===== Section + Background (image + angled two-tone split) ===== */
+.cts-section {
+  position: relative;
+  padding: 90px 0;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Görseli hafif karartan perde */
+.cts-overlay-img {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+/* İki ton lacivert: solda #0c1b3a (footer tonu), sağda #132447 */
+/* Eğik (/) bölme: üst %58 sağ, alt %42 sol */
+.cts-overlay-left,
+.cts-overlay-right {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cts-overlay-left {
+  background: rgba(12, 27, 58, 0.92);        /* #0c1b3a */
+  clip-path: polygon(0 0, 58% 0, 42% 100%, 0 100%);
+}
+.cts-overlay-right {
+  background: rgba(19, 36, 71, 0.90);        /* #132447 */
+  clip-path: polygon(58% 0, 100% 0, 100% 100%, 42% 100%);
+}
+
+.cts-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Grid ===== */
+.cts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+}
+@media (min-width: 1024px) {
+  .cts-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== Headings ===== */
+.cts-eyebrow {
+  color: #ff5a1f;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.cts-title {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  margin: 0 0 28px;
+}
+@media (min-width: 1200px) { .cts-title { font-size: 52px; } }
+
+/* ===== Testimonials (left) ===== */
+.cts-left {
+  color: rgba(255,255,255,.90);
+  position: relative;              /* okları sabitlemek için referans konteyner */
+  padding-bottom: 54px;            /* okların taşmasını engellemek için alt boşluk */
+  min-height: 320px;               /* sıçramayı azaltır */
+}
+
+.cts-quote {
+  color: #ff5a1f;
+  font-size: 64px;
+  line-height: 1;
+  margin: 6px 0 18px;
+}
+
+/* tek sütun yorum metni */
+.cts-body {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* yazar satırı */
+.cts-author-row {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.cts-author-name {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.cts-author-role {
+  color: rgba(255,255,255,.70);
+  font-size: 14px;
+}
+
+/* oklar: sabit konum (içeriğe göre oynamaz) */
+.cts-arrows-fixed {
+  position: absolute;
+  right: 0;
+  bottom: 0;                       /* soldaki bloğun alt-sağı */
+  display: flex;
+  gap: 10px;
+}
+.cts-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.16);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.cts-arrow-btn:hover { background: rgba(255,255,255,.22); transform: translateY(-1px); }
+
+/* slide animasyonu (yönlü) */
+.cts-slide { will-change: transform, opacity; }
+.cts-enter-left  { animation: slideL .35s ease both; }
+.cts-enter-right { animation: slideR .35s ease both; }
+@keyframes slideL { from {opacity:0; transform:translateX(22px)} to {opacity:1; transform:translateX(0)} }
+@keyframes slideR { from {opacity:0; transform:translateX(-22px)} to {opacity:1; transform:translateX(0)} }
+
+/* ===== CTA Panel (right) – call/whatsapp/email odaklı ===== */
+.cts-cta-card {
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  padding: 28px;
+  backdrop-filter: blur(2px);
+}
+
+.cts-lead {
+  color: rgba(255,255,255,.85);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: -10px 0 18px;
+}
+
+.cts-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 8px 0 18px;
+}
+@media (min-width: 520px) {
+  .cts-actions { grid-template-columns: 1fr 1fr; }
+}
+
+/* daha sakin buton renkleri */
+.cts-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 54px;
+  transform: skewX(-12deg);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,.25);
+}
+.cts-btn > span { transform: skewX(12deg); display: inline-block; }
+.cts-btn-call { background: #ff5a1f; }      /* turuncu */
+.cts-btn-wa   { background: #128C7E; }      /* koyu WhatsApp yeşili (neon değil) */
+.cts-btn-mail { background: rgba(255,255,255,.16); }
+
+.cts-small {
+  margin-top: 6px;
+  color: rgba(255,255,255,.80);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.cts-chips {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cts-chip {
+  background: rgba(0,0,0,.2);
+  color: rgba(255,255,255,.9);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}

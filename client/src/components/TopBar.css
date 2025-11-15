@@ -1,0 +1,163 @@
+.top-bar {
+  background-color: #1a2b48;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  min-height: var(--topbar-height, 50px);
+  overflow: hidden;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  max-width: 100%;
+  min-height: var(--topbar-height);
+  position: relative;
+  z-index: 2;
+}
+
+.top-bar-left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: 650px;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.top-bar-icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.top-bar-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.language-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-label {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+.social-icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.instagram-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 992px) {
+  .top-bar-left {
+    margin-left: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .top-bar-left {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .top-bar-item {
+    font-size: 12px;
+  }
+}
+
