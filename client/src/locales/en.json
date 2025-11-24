@@ -4,12 +4,26 @@
     "address": "450 Strand, Charing Cross, London"
   },
   "navbar": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "gallery": "Gallery",
-    "contact": "Contact",
-    "getQuote": "Get Quote"
+    "home": "HOME",
+    "services": "SERVICES",
+    "about": "ABOUT",
+    "gallery": "GALLERY",
+    "contact": "CONTACT",
+    "getQuote": "GET QUOTE",
+    "brand": {
+      "primary": "LÜKS BERLIN",
+      "secondary": "NAKLIYAT",
+      "tagline": "Premium moving partner"
+    },
+    "trust": {
+      "title": "REASONS TO TRUST US",
+      "items": [
+        { "value": "30+", "label": "Years of moving expertise" },
+        { "value": "4.9/5", "label": "Customer satisfaction" },
+        { "value": "7/24", "label": "Control tower availability" },
+        { "value": "100%", "label": "Insured move coverage" }
+      ]
+    }
   },
   "hero": {
     "slides": [
@@ -84,42 +98,261 @@
   "servicesTabs": {
     "eyebrow": "SERVICES",
     "title": "Solutions Tailored To Every Move",
-    "ctaLabel": "Explore all services",
-    "sections": [
+    "viewAllLabel": "View all services…",
+    "readMoreLabel": "Read more",
+    "categories": [
       {
+        "id": "domestic-moving",
         "title": "Domestic Home & Office Moving",
-        "description": "Packed, lifted and delivered with insurance tracking throughout Berlin and surrounding cities.",
         "image": "images/gallery/1.jpg",
-        "details": [
-          "Full packing & disassembly services",
-          "Lift-assisted high floor moving",
-          "Same-day city transfers",
-          "Post-move cleanup and staging"
+        "href": "/services/domestic",
+        "services": [
+          {
+            "id": "home-moving",
+            "title": "House-to-House Moving",
+            "summary": "We orchestrate every household move with insured packing crews, modular lifts and same-day arrival tracking.",
+            "href": "/services/domestic#home-moving"
+          },
+          {
+            "id": "office-moving",
+            "title": "Office & Workplace Relocation",
+            "summary": "Cable labeling, server rack handling and after-hours workstation installation delivered by a single coordination team.",
+            "href": "/services/domestic#office-moving"
+      },
+      {
+            "id": "survey",
+            "title": "Pre-Move Survey",
+            "summary": "On-site parking and lift checks, inventory capture, and transparent budgeting prepared within the same day.",
+            "href": "/services/domestic#survey"
+          },
+          {
+            "id": "packing",
+            "title": "Packing & Short-Term Storage",
+            "summary": "Wardrobe boxes, dish packs and secure climate-friendly storage keep belongings pristine between addresses.",
+            "href": "/services/domestic#packing"
+          }
         ]
       },
       {
-        "title": "International Storage & Warehousing",
-        "description": "Climate controlled depots and bonded storage solutions for global relocations.",
+        "id": "storage",
+        "title": "Domestic Storage Solutions",
         "image": "images/gallery/2.jpg",
-        "details": [
-          "Bonded and customs-ready warehouses",
-          "Inventory management portal",
-          "Consolidation and cross-docking",
-          "Long & short term storage contracts"
+        "href": "/services/storage",
+        "services": [
+          {
+            "id": "warehouse-management",
+            "title": "Warehouse Management",
+            "summary": "Barcode-driven inventory control, cycle counts and customer-facing dashboards for complete visibility.",
+            "href": "/services/storage#warehouse-management"
+          },
+          {
+            "id": "rental-space",
+            "title": "Rental Storage Space",
+            "summary": "Flexible, temperature-regulated units with CCTV, access logging and custom insurance options.",
+            "href": "/services/storage#rental-space"
+          },
+          {
+            "id": "packing-crating",
+            "title": "Packing & Crating",
+            "summary": "Custom crating, vacuum packing and export compliance for high-value or delicate equipment.",
+            "href": "/services/storage#packing-crating"
+          },
+          {
+            "id": "inventory",
+            "title": "Inventory & Counting",
+            "summary": "Periodic reconciliation, audit preparation and exceptions reporting directly from our WMS.",
+            "href": "/services/storage#inventory"
+          }
         ]
       },
       {
+        "id": "logistics",
         "title": "Logistics Support Services",
-        "description": "Project logistics, special cargo coordination and on-site supervision with multilingual teams.",
         "image": "images/gallery/3.jpg",
-        "details": [
-          "Project planning & permitting",
-          "Fairs, events & retail rollout support",
-          "Dedicated dispatch and tracking",
-          "24/7 on-site coordination"
+        "href": "/services/logistics",
+        "services": [
+          {
+            "id": "project-logistics",
+            "title": "Project Logistics",
+            "summary": "Turn-key coordination covering heavy lifts, plant shutdowns, route permits and on-site safety management.",
+            "href": "/services/logistics#project-logistics"
+          },
+          {
+            "id": "event-support",
+            "title": "Fair & Event Support",
+            "summary": "Multi-stop deliveries, stand build teams and reverse logistics for roadshows, fairs and pop-up campaigns.",
+            "href": "/services/logistics#event-support"
+          },
+          {
+            "id": "dedicated-dispatch",
+            "title": "Dedicated Dispatch",
+            "summary": "24/7 control tower with live GPS feeds, driver scheduling and instant SLA notifications.",
+            "href": "/services/logistics#dispatch"
+          },
+          {
+            "id": "field-supervision",
+            "title": "Field Supervision",
+            "summary": "Multilingual supervisors handle loading oversight, photographic reports and customer sign-offs on site.",
+            "href": "/services/logistics#field-supervision"
+          }
         ]
       }
     ]
+  },
+  "homeGallery": {
+    "eyebrow": "GALLERY",
+    "title": "Snapshots From Lüks Berlin",
+    "cta": "View Full Gallery",
+    "navPrev": "Previous",
+    "navNext": "Next",
+    "items": [
+      { "title": "City Move In Berlin", "tag": "PROJECT" },
+      { "title": "Lift-Assisted Moving", "tag": "EQUIPMENT" },
+      { "title": "Office Relocation", "tag": "CASE" },
+      { "title": "Insured Transport", "tag": "CASE" },
+      { "title": "Partial Load Service", "tag": "PROJECT" }
+    ]
+  },
+  "galleryPage": {
+    "hero": {
+      "eyebrow": "GALLERY",
+      "title": "See Our Story Through The Lens",
+      "subtitle": "Real moments from our moves, warehouses and crews."
+    },
+    "tabs": {
+      "photos": "Photos",
+      "videos": "Videos"
+    },
+    "lightbox": {
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "ABOUT US",
+      "title": "Moving Experience From Berlin To The World",
+      "subtitle": "Decades of relocation know-how, a modern fleet and multilingual coordinators let us manage every step for you.",
+      "background": "images/background_logistic_truck.jpg"
+    },
+    "who": {
+      "eyebrow": "WHO WE ARE",
+      "title": "Our Company Story",
+      "body": "Lüks Berlin Nakliyat is an independent logistics squad delivering end-to-end solutions for city and intercity moves. From storage to project logistics and bespoke packing we stand next to individuals and brands alike, keeping every detail transparent from planning to delivery."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "body": "Carry the quality standard we started in Berlin to every corner of Europe while offering trustworthy, fast and technology-backed moving experiences."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "body": "Treat every relocation as our own story, exceed expectations with tailored solutions and stay reachable with expert teams at all times."
+    },
+    "social": {
+      "eyebrow": "SOCIAL MEDIA",
+      "title": "Follow Us Online",
+      "links": {
+        "instagram": "Instagram",
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "values": {
+      "eyebrow": "OUR CORE VALUES",
+      "title": "What Matters To Us",
+      "items": {
+        "operationalSafety": {
+          "title": "Operational Safety",
+          "description": "Our fleet and crews deliver the same quality on every transfer."
+        },
+        "onTime": {
+          "title": "On-Time Delivery",
+          "description": "We guarantee loading and handover at the agreed times."
+        },
+        "expertTeam": {
+          "title": "Expert Team",
+          "description": "Certified, experienced specialists are ready for every scenario."
+        },
+        "customerFocus": {
+          "title": "Customer Focus",
+          "description": "We craft unique solutions and keep you informed throughout the journey."
+        },
+        "smartTracking": {
+          "title": "Smart Tracking",
+          "description": "Live monitoring, reporting and IoT sensors keep each process transparent."
+        },
+        "storageAssurance": {
+          "title": "Storage Assurance",
+          "description": "24/7 security, climate-controlled warehouses and insured packing."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "Route optimisation helps us reduce our carbon footprint every day."
+        },
+        "support247": {
+          "title": "Support 24/7",
+          "description": "Our operations hub is reachable at any hour."
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "infoEyebrow": "INFORMATION",
+    "infoTitle": "CONTACT DETAILS",
+    "infoLead": "We answer every question before the project starts and keep you in touch with the same crew whenever you need us.",
+    "infoItems": {
+      "address": { "label": "Address" },
+      "phone": { "label": "Phone" },
+      "mail": { "label": "Email" },
+      "hours": { "label": "Working Hours", "value": "We operate 24/7" }
+    },
+    "formEyebrow": "GET A QUOTE",
+    "formTitle": "GET IN TOUCH",
+    "formLead": "Fill the form and, when you hit send, we will receive your message on WhatsApp instantly.",
+    "placeholders": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Your message"
+    },
+    "formButton": "REQUEST VIA WHATSAPP",
+    "ctaEyebrow": "LET’S TALK TODAY",
+    "ctaTitle": "Call us or visit our office to get the best transfer experience",
+    "ctaButton": "WHATSAPP REQUEST",
+    "whatsappDefault": "Hello, I would like to get information.",
+    "whatsapp": {
+      "greeting": "Hello,",
+      "name": "I'm {{name}}.",
+      "email": "Email: {{email}}.",
+      "message": "My message: {{message}}."
+    }
+  },
+  "contactTestimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "What our clients say",
+    "testimonials": [
+      {
+        "text": "They wrapped every piece carefully and arrived exactly on time. Communication was excellent and the whole process felt effortless.",
+        "name": "Ahmet T.",
+        "role": "Berlin — Home Move"
+      },
+      {
+        "text": "Our office relocation finished faster than planned. The crew stayed solution oriented the entire time; we highly recommend them.",
+        "name": "Merve K.",
+        "role": "Berlin — Office Move"
+      }
+    ],
+    "cta": {
+      "title": "Request a call back",
+      "subtitle": "For the fastest response call us, drop a WhatsApp message or send an email whenever you prefer.",
+      "call": "Call Now",
+      "whatsapp": "Message on WhatsApp",
+      "mail": "Send Email"
+    },
+    "chips": {
+      "hours": "09:00 – 21:00",
+      "coverage": "Berlin & surrounding area"
+    }
   },
   "footer": {
     "brand": {

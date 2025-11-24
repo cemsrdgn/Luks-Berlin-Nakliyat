@@ -4,12 +4,26 @@
     "address": "450 Strand, Charing Cross, London"
   },
   "navbar": {
-    "home": "Ana Sayfa",
-    "services": "Hizmetlerimiz",
-    "about": "Hakkımızda",
-    "gallery": "Galeri",
-    "contact": "İletişim",
-    "getQuote": "Teklif Al"
+    "home": "ANA SAYFA",
+    "services": "HİZMETLERİMİZ",
+    "about": "HAKKIMIZDA",
+    "gallery": "GALERİ",
+    "contact": "İLETİŞİM",
+    "getQuote": "TEKLİF AL",
+    "brand": {
+      "primary": "LÜKS BERLİN",
+      "secondary": "NAKLİYAT",
+      "tagline": "Berlin'de premium taşıma partneriniz"
+    },
+    "trust": {
+      "title": "BİZE GÜVENMEK İÇİN NEDENLER",
+      "items": [
+        { "value": "30+", "label": "Yıllık nakliye deneyimi" },
+        { "value": "4.9/5", "label": "Müşteri memnuniyeti puanı" },
+        { "value": "7/24", "label": "Kesintisiz operasyon merkezi" },
+        { "value": "100%", "label": "Sigortalı taşıma güvencesi" }
+      ]
+    }
   },
   "hero": {
     "slides": [
@@ -84,42 +98,261 @@
   "servicesTabs": {
     "eyebrow": "HİZMETLER",
     "title": "Her Taşıma İçin Özel Çözümler",
-    "ctaLabel": "Hizmetlerin tamamını gör",
-    "sections": [
+    "viewAllLabel": "Tüm hizmetleri gör…",
+    "readMoreLabel": "Devamını oku",
+    "categories": [
       {
-        "title": "Yurt İçi Ev & Ofis Taşımacılığı",
-        "description": "Berlin ve çevresinde sigortalı, lift destekli ve paketlemeli taşımacılık.",
+        "id": "domestic-moving",
+        "title": "Yurt İçi Ev ve Ofis Taşımacılığı",
         "image": "images/gallery/1.jpg",
-        "details": [
-          "Tam paketleme ve demontaj hizmeti",
-          "Asansörlü yüksek kat taşımacılığı",
-          "Aynı gün şehir içi transfer",
-          "Teslim sonrası kurulum ve toparlama"
+        "href": "/services/domestic",
+        "services": [
+          {
+            "id": "home-moving",
+            "title": "Evden Eve Nakliyat",
+            "summary": "Sigortalı paketleme ekipleri, modüler asansör kurulumları ve aynı gün teslim takibi ile tüm daire taşımalarını uçtan uca yönetiyoruz.",
+            "href": "/services/domestic#home-moving"
+          },
+          {
+            "id": "office-moving",
+            "title": "Büro ve Ofis Taşımacılığı",
+            "summary": "Sunucu kabinetlerinden masa modüllerine kadar numaralandırma, paketleme ve yeni lokasyonda kurulum-düzenleme süreçlerini tek ekip yönetiyor.",
+            "href": "/services/domestic#office-moving"
+      },
+      {
+            "id": "survey",
+            "title": "Ekspertiz Hizmetleri",
+            "summary": "Yerinde keşif, kat ve park izinleri, eşya listesi çıkarımı ve şeffaf fiyatlandırma dosyası aynı gün içinde tarafına iletilir.",
+            "href": "/services/domestic#survey"
+          },
+          {
+            "id": "packing",
+            "title": "Ambalaj ve Depolama",
+            "summary": "Özel tekstil askıları, mutfak setleri ve kısa süreli kapalı depo hizmetiyle paketlenen eşyalar zarar görmeden bekletilir.",
+            "href": "/services/domestic#packing"
+          }
         ]
       },
       {
-        "title": "Yurt Dışı Depolama Hizmetleri",
-        "description": "İklim kontrollü depolar ve gümrüklü alanlarla uluslararası çözümler.",
+        "id": "storage",
+        "title": "Yurt İçi Depolama Hizmetleri",
         "image": "images/gallery/2.jpg",
-        "details": [
-          "Gümrüklü ve gümrüksüz depo seçenekleri",
-          "Stok yönetim portalı",
-          "Konsolidasyon ve cross-docking",
-          "Kısa ve uzun dönem sözleşmeler"
+        "href": "/services/storage",
+        "services": [
+          {
+            "id": "warehouse-management",
+            "title": "Depo Yönetimi",
+            "summary": "Stok kartı açılışından sipariş çıkışına kadar barkodlu takip, raporlama ve müşteri paneli entegrasyonu kuruyoruz.",
+            "href": "/services/storage#warehouse-management"
+          },
+          {
+            "id": "rental-space",
+            "title": "Kiralık Depo Alanı",
+            "summary": "Farklı metrekarelerde, ısı ve nem kontrollü, 7/24 izlenen depoları kısa veya uzun süreli kiralayabilirsiniz.",
+            "href": "/services/storage#rental-space"
+          },
+          {
+            "id": "packing-crating",
+            "title": "Paketleme ve Sandıklama",
+            "summary": "Sanayi ekipmanları, sanat eserleri ve hassas cihazlar için ahşap sandık, vakum ve nem bariyerli paketleme çözümleri.",
+            "href": "/services/storage#packing-crating"
+          },
+          {
+            "id": "inventory",
+            "title": "Sayım & Envanter",
+            "summary": "Periyodik sayım, reconcilliation raporları ve bağımsız denetim çıktıları tek panelde hazırlanır.",
+            "href": "/services/storage#inventory"
+          }
         ]
       },
       {
+        "id": "logistics",
         "title": "Lojistik Destek Hizmetleri",
-        "description": "Proje lojistiği, özel kargo koordinasyonu ve çok dilli saha ekipleri.",
         "image": "images/gallery/3.jpg",
-        "details": [
-          "Proje planlama ve izin süreçleri",
-          "Fuar, etkinlik ve perakende roll-out desteği",
-          "7/24 takip ve dispatch",
-          "Saha koordinasyonu ve raporlama"
+        "href": "/services/logistics",
+        "services": [
+          {
+            "id": "project-logistics",
+            "title": "Proje Lojistiği",
+            "summary": "Şantiye, fabrika hattı veya ağır ekipman taşımalarında güzergâh izinleri ve vinç-saha koordinasyonunu sağlıyoruz.",
+            "href": "/services/logistics#project-logistics"
+          },
+          {
+            "id": "event-support",
+            "title": "Fuar & Etkinlik Desteği",
+            "summary": "Fuar standları, roadshow kampanyaları ve mağaza açılışlarında teslimat, kurulum ve geri toplama planlarını biz yönetiyoruz.",
+            "href": "/services/logistics#event-support"
+          },
+          {
+            "id": "dedicated-dispatch",
+            "title": "7/24 Dispatch",
+            "summary": "Gerçek zamanlı konum görüntüleme, sürücü vardiya planı ve SLA ihlal bildirimleri tek merkezden takip edilir.",
+            "href": "/services/logistics#dispatch"
+          },
+          {
+            "id": "field-supervision",
+            "title": "Saha Süpervizyonu",
+            "summary": "Çok dilli saha ekipleri, yükleme boşaltma gözetimi, fotoğraflı rapor ve müşteri onay süreçlerini yönetir.",
+            "href": "/services/logistics#field-supervision"
+          }
         ]
       }
     ]
+  },
+  "homeGallery": {
+    "eyebrow": "GALERİ",
+    "title": "Lüks Berlin’den Kareler",
+    "cta": "Tüm Galeri",
+    "navPrev": "Önceki",
+    "navNext": "Sonraki",
+    "items": [
+      { "title": "Berlin Şehir İçi Taşıma", "tag": "PROJE" },
+      { "title": "Asansörlü Nakliyat", "tag": "EKİPMAN" },
+      { "title": "Ofis Taşımacılığı", "tag": "VAKA" },
+      { "title": "Sigortalı Taşımacılık", "tag": "VAKA" },
+      { "title": "Parsiyel Yükleme", "tag": "PROJE" }
+    ]
+  },
+  "galleryPage": {
+    "hero": {
+      "eyebrow": "GALERİ",
+      "title": "Hikâyemizi Kadrajdan İzleyin",
+      "subtitle": "Taşıma süreçlerimizden, depolarımızdan ve ekiplerimizden anlık kareler."
+    },
+    "tabs": {
+      "photos": "Fotoğraflar",
+      "videos": "Videolar"
+    },
+    "lightbox": {
+      "close": "Kapat",
+      "prev": "Önceki",
+      "next": "Sonraki"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "HAKKIMIZDA",
+      "title": "Berlin’den Dünyaya Uzanan Taşıma Deneyimi",
+      "subtitle": "Onlarca yıllık nakliye tecrübesi, modern araç filomuz ve çok dilli operasyon ekibimizle tüm süreçleri sizin adınıza yönetiyoruz.",
+      "background": "images/background_logistic_truck.jpg"
+    },
+    "who": {
+      "eyebrow": "BİZ KİMİZ?",
+      "title": "Kurumsal Hikâyemiz",
+      "body": "Lüks Berlin Nakliyat, şehir içi ve şehirler arası taşımacılıkta uçtan uca çözümler sunan bağımsız bir lojistik ekip. Depolama, ofis taşıma, proje lojistiği ve özel paketleme hizmetlerimizle hem bireylerin hem de markaların yanında yer alıyoruz. Felsefemiz, planlama aşamasından teslimata kadar her detayı şeffaf ve ulaşılabilir kılmak."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "body": "Berlin’de başladığımız kaliteli hizmet standardını Avrupa’nın her noktasına taşımak; müşterilerimize güvenilir, hızlı ve teknolojiyle desteklenen taşıma deneyimi sunmak."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "body": "Her taşınmayı kendi hikâyemiz gibi sahiplenmek, beklentileri aşacak çözümler üretmek ve alanında uzman ekibimizle her zaman ulaşılabilir olmak."
+    },
+    "social": {
+      "eyebrow": "SOSYAL MEDYA",
+      "title": "Sosyal Medyada Bizi Takip Edin",
+      "links": {
+        "instagram": "Instagram",
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "values": {
+      "eyebrow": "TEMEL DEĞERLERİMİZ",
+      "title": "Bizim İçin Önemli Olanlar",
+      "items": {
+        "operationalSafety": {
+          "title": "Operasyonel Güven",
+          "description": "Araç filomuz ve ekiplerimiz her transferde aynı kaliteyi sunar."
+        },
+        "onTime": {
+          "title": "Zamanında Teslim",
+          "description": "Planlanan saatlerde yükleme ve teslimatı garanti altına alırız."
+        },
+        "expertTeam": {
+          "title": "Uzman Ekip",
+          "description": "Sertifikalı ve deneyimli kadromuzla her senaryoya hazırlıklıyız."
+        },
+        "customerFocus": {
+          "title": "Müşteri Odaklılık",
+          "description": "Her proje için tekil çözüm üretir, yol boyunca sürekli bilgi veririz."
+        },
+        "smartTracking": {
+          "title": "Akıllı Takip",
+          "description": "Canlı izleme, raporlama ve IoT sensörleri ile süreçleri şeffaf yürütürüz."
+        },
+        "storageAssurance": {
+          "title": "Depolama Güvencesi",
+          "description": "24/7 güvenlik, iklim kontrollü depolar ve sigortalı paketleme sunarız."
+        },
+        "sustainability": {
+          "title": "Sürdürülebilirlik",
+          "description": "Rotayı optimize ederek karbon ayak izimizi sürekli düşürüyoruz."
+        },
+        "support247": {
+          "title": "7/24 Destek",
+          "description": "Operasyon merkezimiz günün her saatinde ulaşılabilir."
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "infoEyebrow": "BİLGİ",
+    "infoTitle": "İLETİŞİM DETAYLARI",
+    "infoLead": "Projelerinize başlamadan önce tüm sorularınızı yanıtlıyor, ihtiyaç duyduğunuz her anda aynı ekiple iletişimde kalıyoruz.",
+    "infoItems": {
+      "address": { "label": "Adres" },
+      "phone": { "label": "Telefon" },
+      "mail": { "label": "E-posta" },
+      "hours": { "label": "Çalışma Saatleri", "value": "7/24 hizmet veriyoruz" }
+    },
+    "formEyebrow": "TEKLİF AL",
+    "formTitle": "BİZE ULAŞIN",
+    "formLead": "Formu doldurun; gönder butonuna bastığınızda WhatsApp üzerinden bize mesaj iletebilirsiniz.",
+    "placeholders": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "message": "Mesajınız"
+    },
+    "formButton": "WHATSAPP İLE TEKLİF AL",
+    "ctaEyebrow": "HEMEN BİZİMLE İLETİŞİME GEÇİN",
+    "ctaTitle": "En iyi transfer hizmetini almak için bizi arayın ya da ofisimizi ziyaret edin",
+    "ctaButton": "WHATSAPP İLE TEKLİF AL",
+    "whatsappDefault": "Merhaba, bilgi almak istiyorum.",
+    "whatsapp": {
+      "greeting": "Merhaba,",
+      "name": "ben {{name}}.",
+      "email": "E-posta: {{email}}.",
+      "message": "Mesajım: {{message}}."
+    }
+  },
+  "contactTestimonials": {
+    "eyebrow": "REFERANSLAR",
+    "title": "Müşterilerimiz ne söylüyor?",
+    "testimonials": [
+      {
+        "text": "Eşyalarımızı özenle paketlediler, tam saatinde geldiler. İletişimleri güçlüydü ve süreci çok iyi yönettiller.",
+        "name": "Ahmet T.",
+        "role": "Berlin — Ev Taşıma"
+      },
+      {
+        "text": "Ofis taşımamız planlandığı gibi, hızlı bitti. Ekip çözüm odaklıydı; gönül rahatlığıyla öneririm.",
+        "name": "Merve K.",
+        "role": "Berlin — Ofis Taşıma"
+      }
+    ],
+    "cta": {
+      "title": "Geri dönüş talep edin",
+      "subtitle": "En hızlı dönüş için hemen arayın ya da WhatsApp’tan yazın. İsterseniz e-posta da atabilirsiniz.",
+      "call": "Hemen Ara",
+      "whatsapp": "WhatsApp’tan Yaz",
+      "mail": "E-posta"
+    },
+    "chips": {
+      "hours": "09:00 – 21:00",
+      "coverage": "Berlin & çevresi"
+    }
   },
   "footer": {
     "brand": {

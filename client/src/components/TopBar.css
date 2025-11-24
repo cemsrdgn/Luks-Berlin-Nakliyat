@@ -23,7 +23,7 @@
   display: flex;
   gap: 30px;
   align-items: center;
-  margin-left: 650px;
+  margin-left: var(--logo-section-width, 650px);
 }
 
 .top-bar-item {
@@ -136,9 +136,9 @@
   filter: brightness(0) invert(1);
 }
 
-@media (max-width: 992px) {
-  .top-bar-left {
-    margin-left: 450px;
+@media (max-width: 1200px) {
+  .top-bar {
+    display: none;
   }
 }
 

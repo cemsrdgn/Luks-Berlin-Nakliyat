@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./contacttestimonials.css";
 import bgContact from "./contact_bg.jpg";
 
@@ -14,7 +15,7 @@ function useDirection(index) {
 }
 
 /* ===== Left: Testimonials ===== */
-function Testimonials({ items }) {
+function Testimonials({ items, eyebrow, title }) {
   const [i, setI] = useState(0);
   const t = items[i] || {};
   const dir = useDirection(i);
@@ -22,8 +23,8 @@ function Testimonials({ items }) {
 
   return (
     <div className="cts-left">
-      <div className="cts-eyebrow">TESTIMONIALS</div>
-      <h2 className="cts-title">OUR CUSTOMER REVIEWS</h2>
+      <div className="cts-eyebrow">{eyebrow}</div>
+      <h2 className="cts-title">{title}</h2>
 
       <div className="cts-quote">”</div>
 
@@ -62,24 +63,21 @@ function Testimonials({ items }) {
 }
 
 /* ===== Right: CTA odaklı panel (Ara / WhatsApp / E-posta) ===== */
-function CtaPanel({ phoneE164, whatsappE164, email }) {
+function CtaPanel({ phoneE164, whatsappE164, email, copy }) {
   const telHref = `tel:${(phoneE164 || "").replace(/\s/g, "")}`;
   const waHref = `https://wa.me/${(whatsappE164 || "").replace(/\D/g, "")}`;
   const mailHref = email ? `mailto:${email}` : "#";
 
   return (
     <div className="cts-cta-card">
-      <div className="cts-eyebrow">CONTACTS US</div>
-      <h2 className="cts-title">REQUEST A CALL BACK</h2>
+      <div className="cts-eyebrow">{copy?.eyebrow}</div>
+      <h2 className="cts-title">{copy?.title}</h2>
 
-      <p className="cts-lead">
-        En hızlı dönüş için hemen arayın ya da WhatsApp’tan yazın. İsterseniz
-        e-posta da atabilirsiniz.
-      </p>
+      <p className="cts-lead">{copy?.subtitle}</p>
 
       <div className="cts-actions">
         <a className="cts-btn cts-btn-call" href={telHref}>
-          <span>Hemen Ara</span>
+          <span>{copy?.call}</span>
         </a>
         <a
           className="cts-btn cts-btn-wa"
@@ -87,10 +85,10 @@ function CtaPanel({ phoneE164, whatsappE164, email }) {
           target="_blank"
           rel="noreferrer"
         >
-          <span>WhatsApp’tan Yaz</span>
+          <span>{copy?.whatsapp}</span>
         </a>
         <a className="cts-btn cts-btn-mail" href={mailHref}>
-          <span>E-posta</span>
+          <span>{copy?.mail}</span>
         </a>
       </div>
 
@@ -98,8 +96,10 @@ function CtaPanel({ phoneE164, whatsappE164, email }) {
         <div className="cts-chips">
           <span className="cts-chip">☎ {phoneE164}</span>
           {email ? <span className="cts-chip">✉ {email}</span> : null}
-          <span className="cts-chip">🕘 09:00 – 21:00</span>
-          <span className="cts-chip">📍 Berlin & çevresi</span>
+          {copy?.chips?.hours ? <span className="cts-chip">🕘 {copy.chips.hours}</span> : null}
+          {copy?.chips?.coverage ? (
+            <span className="cts-chip">📍 {copy.chips.coverage}</span>
+          ) : null}
         </div>
       </div>
     </div>
@@ -113,20 +113,9 @@ export default function ContactTestimonialsSection({
   whatsappE164 = "+49 30 000000",
   email = "info@luksberlinnakliyat.com",
 }) {
-  const testimonials = [
-    {
-      id: 1,
-      text: "Eşyalarımızı özenle paketlediler, tam saatinde geldiler. İletişimleri güçlüydü ve süreci çok iyi yönettiller.",
-      name: "Ahmet T.",
-      role: "Berlin — Ev Taşıma",
-    },
-    {
-      id: 2,
-      text: "Ofis taşımamız planlandığı gibi, hızlı bitti. Ekip çözüm odaklıydı; gönül rahatlığıyla öneririm.",
-      name: "Merve K.",
-      role: "Berlin — Ofis Taşıma",
-    },
-  ];
+  const { t } = useTranslation();
+  const copy = t("contactTestimonials", { returnObjects: true }) || {};
+  const testimonials = copy.testimonials || [];
 
   return (
     <section
@@ -141,11 +130,12 @@ export default function ContactTestimonialsSection({
 
       <div className="cts-inner">
         <div className="cts-grid">
-          <Testimonials items={testimonials} />
+          <Testimonials items={testimonials} eyebrow={copy.eyebrow} title={copy.title} />
           <CtaPanel
             phoneE164={phoneE164}
             whatsappE164={whatsappE164}
             email={email}
+            copy={{ ...copy.cta, eyebrow: copy.eyebrow, chips: copy.chips }}
           />
         </div>
       </div>

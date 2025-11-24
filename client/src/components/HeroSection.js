@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import heroImage from '../assets/img/hero.jpg';
 import './herosection.css';
 
@@ -7,6 +8,7 @@ const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const slides = t('hero.slides', { returnObjects: true }) || [];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animateFlip, setAnimateFlip] = useState(false);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -16,10 +18,14 @@ const HeroSection = () => {
     if (!slides.length) return undefined;
     const interval = setInterval(
       () => setCurrentIndex((prev) => (prev + 1) % slides.length),
-      2800
+      3200
     );
     return () => clearInterval(interval);
   }, [slides.length]);
+
+  useEffect(() => {
+    setAnimateFlip((prev) => !prev);
+  }, [currentIndex, i18n.language]);
 
   const scrollToNext = () => {
     if (typeof window === 'undefined') return;
@@ -30,17 +36,33 @@ const HeroSection = () => {
   };
 
   const activeSlide = slides[currentIndex] || {};
+  const animationKey = useMemo(
+    () => `${i18n.language}-${currentIndex}`,
+    [i18n.language, currentIndex]
+  );
 
   return (
-    <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
+    <section className="hero-section" id="home" style={{ backgroundImage: `url(${heroImage})` }}>
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-main-title slide-in-left">{activeSlide.title}</h1>
-          <p className="hero-subtitle slide-in-right">{activeSlide.subtitle}</p>
-          <button className="hero-cta-button">
+          <div className="hero-copy">
+            <h1
+              key={`hero-title-${animationKey}`}
+              className={`hero-main-title ${animateFlip ? 'hero-slide-left' : 'hero-slide-left-alt'}`}
+            >
+              {activeSlide.title}
+            </h1>
+            <p
+              key={`hero-subtitle-${animationKey}`}
+              className={`hero-subtitle ${animateFlip ? 'hero-slide-right' : 'hero-slide-right-alt'}`}
+            >
+              {activeSlide.subtitle}
+            </p>
+          </div>
+          <Link to="/services" className="hero-cta-button">
             <span>{t('hero.servicesButton')}</span>
-          </button>
+          </Link>
         </div>
       </div>
       <button className="scroll-down-arrow" onClick={scrollToNext} aria-label="Scroll down">

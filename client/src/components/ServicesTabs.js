@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import './servicestabs.css';
+
+const MAX_VISIBLE_SERVICES = 4;
 
 const resolveImage = (path) => {
   if (!path) {
@@ -13,17 +16,65 @@ const resolveImage = (path) => {
 };
 
 const ServicesTabs = () => {
-  const { t } = useTranslation();
-  const sections = t('servicesTabs.sections', { returnObjects: true }) || [];
-  const ctaLabel = t('servicesTabs.ctaLabel', 'View more');
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { t, i18n } = useTranslation();
+  const viewAllFallback = t('servicesTabs.viewAllLabel', { defaultValue: 'View all services…' });
+  const readMoreLabel = t('servicesTabs.readMoreLabel', { defaultValue: 'Read more' });
 
-  if (!sections.length) {
+  const categories = useMemo(() => {
+    const translatedCategories = t('servicesTabs.categories', { returnObjects: true }) || [];
+    if (Array.isArray(translatedCategories) && translatedCategories.length) {
+      return translatedCategories;
+    }
+    const legacySections = t('servicesTabs.sections', { returnObjects: true }) || [];
+    return legacySections.map((section, index) => ({
+      id: `legacy-${index}`,
+      title: section.title,
+      image: section.image,
+      href: '/services',
+      services: (section.details || []).map((detail, detailIdx) => ({
+        id: `legacy-${index}-${detailIdx}`,
+        title: detail,
+        summary: section.description || '',
+        href: '/services'
+      }))
+    }));
+  }, [t, i18n.language]);
+
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [activeService, setActiveService] = useState(0);
+
+  useEffect(() => {
+    setActiveCategory(0);
+    setActiveService(0);
+  }, [categories.length]);
+
+  useEffect(() => {
+    const servicesCount = categories[activeCategory]?.services?.length || 0;
+    if (servicesCount === 0) {
+      setActiveService(0);
+      return;
+    }
+    if (activeService > servicesCount - 1) {
+      setActiveService(0);
+    }
+  }, [categories, activeCategory, activeService]);
+
+  if (!categories.length) {
     return null;
   }
 
-  const active = sections[activeIndex] || {};
-  const imageSrc = resolveImage(active.image);
+  const activeCategoryData = categories[activeCategory] || {};
+  const services = activeCategoryData.services || [];
+  const currentService = services[activeService] || services[0] || {};
+  const imageSrc = resolveImage(activeCategoryData.image);
+
+  const handleCategoryToggle = (index) => {
+    if (index === activeCategory) return;
+    setActiveCategory(index);
+    setActiveService(0);
+  };
+
+  const visibleServices = (category) => (category.services || []).slice(0, MAX_VISIBLE_SERVICES);
 
   return (
     <section className="services-tabs" id="services">
@@ -32,38 +83,65 @@ const ServicesTabs = () => {
           <p className="services-tabs-eyebrow">{t('servicesTabs.eyebrow')}</p>
           <h2 className="services-tabs-title">{t('servicesTabs.title')}</h2>
 
-          <div className="services-tabs-nav">
-            {sections.map((section, index) => (
-              <button
-                key={section.title}
-                type="button"
-                className={`services-tabs-nav-item ${index === activeIndex ? 'active' : ''}`}
-                onClick={() => setActiveIndex(index)}
-              >
-                <span>{section.title}</span>
-                <span className="services-tabs-icon">{index === activeIndex ? '−' : '+'}</span>
-              </button>
-            ))}
+          <div className="services-drawer-group">
+            {categories.map((category, index) => {
+              const isOpen = index === activeCategory;
+              return (
+                <div className={`services-drawer ${isOpen ? 'open' : ''}`} key={category.id || category.title}>
+                  <button
+                    type="button"
+                    className="services-drawer-trigger"
+                    onClick={() => handleCategoryToggle(index)}
+                    aria-expanded={isOpen}
+                  >
+                    <span>{category.title}</span>
+                    <span className="services-drawer-trigger-icon">{isOpen ? '−' : '+'}</span>
+                  </button>
+                  <div
+                    className={`services-drawer-panel ${isOpen ? 'open' : ''}`}
+                    aria-hidden={!isOpen}
+                  >
+                    {visibleServices(category).map((service, serviceIdx) => (
+                      <button
+                        type="button"
+                        key={service.id || service.title}
+                        className={`services-drawer-item ${activeService === serviceIdx && isOpen ? 'active' : ''}`}
+                        onClick={() => setActiveService(serviceIdx)}
+                      >
+                        <span>{service.title}</span>
+                      </button>
+                    ))}
+                    <Link
+                      to={category.href || '/services'}
+                      className="services-drawer-viewall"
+                    >
+                      {category.viewAllLabel || viewAllFallback}
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-
         </div>
 
         <div className="services-tabs-right">
-          <div className="services-tabs-image-wrapper">
-            <img src={imageSrc} alt={active.title} className="services-tabs-image" />
-          </div>
-
-          <div className="services-tabs-panel">
-            <h3>{active.title}</h3>
-            {active.description && <p>{active.description}</p>}
-            <ul>
-              {(active.details || []).map((detail, idx) => (
-                <li key={`${detail}-${idx}`}>{detail}</li>
-              ))}
-            </ul>
-            <a href="/hizmetlerimiz" className="services-tabs-cta">
-              <span>{ctaLabel}</span>
-            </a>
+          <div className="services-card">
+            <div className="services-card-media">
+              <img src={imageSrc} alt={activeCategoryData.title} />
+            </div>
+            <div className="services-card-body">
+              <p className="services-card-eyebrow">{activeCategoryData.title}</p>
+              <h3>{currentService.title}</h3>
+              {currentService.summary && <p>{currentService.summary}</p>}
+            </div>
+            <div className="services-card-actions">
+              <Link
+                to={currentService.href || activeCategoryData.href || '/services'}
+                className="services-card-link"
+              >
+                <span>{readMoreLabel}</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
   const points = t('whyChooseUs.points', { returnObjects: true }) || [];
 
   return (
-    <section className="chooseus-section" id="why-us">
+    <section className="chooseus-section" id="about">
       <div className="chooseus-inner">
         <div className="chooseus-left">
           <p className="chooseus-eyebrow">{t('whyChooseUs.eyebrow')}</p>

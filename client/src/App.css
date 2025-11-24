@@ -1,5 +1,52 @@
 :root {
   --topbar-height: 50px;
+  --logo-section-width: 650px;
+  --page-bg: #fdfdfd;
+  --card-shadow: 0 24px 48px rgba(10, 22, 40, 0.08);
+  --card-shadow-strong: 0 36px 68px rgba(10, 22, 40, 0.12);
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --logo-section-width: 580px;
+  }
+}
+
+@media (max-width: 1420px) {
+  :root {
+    --logo-section-width: 540px;
+  }
+}
+
+@media (max-width: 1360px) {
+  :root {
+    --logo-section-width: 500px;
+  }
+}
+
+@media (max-width: 1325px) {
+  :root {
+    --logo-section-width: 440px;
+  }
+}
+
+@media (max-width: 1260px) {
+  :root {
+    --logo-section-width: 330px;
+  }
+}
+
+@media (max-width: 1230px) {
+  :root {
+    --logo-section-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --logo-section-width: 0px;
+    --topbar-height: 0px;
+  }
 }
 
 * {
@@ -16,8 +63,80 @@
   background-color: #ffffff;
 }
 
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--page-bg);
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+}
+
+.page-section {
+  width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: var(--page-bg);
+}
+
+/* --- Navbar visual tweaks (override legacy styles) --- */
+.nav-link {
+  text-decoration: none;
+  color: #1a2b48;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background-color: #f76b1c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f76b1c;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.whatsapp-button {
+  align-items: center;
+  background: linear-gradient(135deg, #f76b1c, #fd9a4f) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  padding: 11px 26px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  gap: 10px;
+  font-size: 13px;
+  box-shadow: 0 18px 32px rgba(247, 107, 28, 0.4) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 36px rgba(247, 107, 28, 0.55) !important;
 }

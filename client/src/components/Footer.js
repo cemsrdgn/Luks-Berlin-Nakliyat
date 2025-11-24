@@ -1,21 +1,22 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import instagramLogo from '../assets/logo/instagram.png';
 import './footer.css';
 
 const quickLinkAnchors = [
-  { key: 'home', href: '#home' },
-  { key: 'services', href: '#services' },
-  { key: 'about', href: '#about' },
-  { key: 'gallery', href: '#gallery' },
-  { key: 'contact', href: '#contact' }
+  { key: 'home', href: '/' },
+  { key: 'services', href: '/services' },
+  { key: 'about', href: '/about' },
+  { key: 'gallery', href: '/gallery' },
+  { key: 'contact', href: '/contact' }
 ];
 
 const serviceAnchors = [
-  { key: 'intercity', href: '#service-air' },
-  { key: 'office', href: '#service-expert' },
-  { key: 'elevator', href: '#service-ground' },
-  { key: 'logistics', href: '#service-logistics' }
+  { key: 'intercity', href: '/services#intercity' },
+  { key: 'office', href: '/services#office' },
+  { key: 'elevator', href: '/services#elevator' },
+  { key: 'logistics', href: '/services#logistics' }
 ];
 
 const Footer = () => {
@@ -82,7 +83,7 @@ const Footer = () => {
             <ul className="footer-list">
               {quickLinks.map((item) => (
                 <li key={item.key}>
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -93,7 +94,7 @@ const Footer = () => {
             <ul className="footer-list">
               {services.map((item) => (
                 <li key={item.key}>
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>

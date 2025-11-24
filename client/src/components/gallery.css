@@ -56,7 +56,7 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
-  box-shadow: 0 10px 25px rgba(12, 27, 58, 0.12);
+  box-shadow: var(--card-shadow);
   color: #0c1b3a;
   font-size: 24px;
   font-weight: 600;
@@ -77,7 +77,7 @@
 
 .gallery-nav-btn:hover {
   transform: translateY(-50%) scale(1.05);
-  box-shadow: 0 12px 30px rgba(12, 27, 58, 0.18);
+  box-shadow: var(--card-shadow-strong);
 }
 
 @media (min-width: 768px) {
@@ -121,7 +121,7 @@
   background-color: #ffffff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 55px rgba(12, 27, 58, 0.12);
+  box-shadow: var(--card-shadow-strong);
   position: relative;
 }
 
@@ -242,7 +242,7 @@
   font-size: 14px;
   transform: skewX(-12deg);
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 12px 30px rgba(255, 90, 31, 0.3);
+  box-shadow: var(--card-shadow);
 }
 
 .gallery-cta-button span {
