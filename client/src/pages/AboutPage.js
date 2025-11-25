@@ -16,9 +16,11 @@ const valueIcons = [
 ];
 
 const socialLinks = [
-  { key: 'instagram', icon: '📸', href: 'https://instagram.com' },
-  { key: 'tiktok', icon: '🎵', href: 'https://tiktok.com' },
-  { key: 'linkedin', icon: '💼', href: 'https://linkedin.com' }
+  {
+    key: 'instagram',
+    icon: '📸',
+    href: 'https://www.instagram.com/luksberlinevofistransferi?igsh=M3VjODJ6cnQ4M2o0&utm_source=qr'
+  }
 ];
 
 const AboutPage = () => {
@@ -96,9 +98,8 @@ const AboutPage = () => {
 
       <ContactTestimonialsSection
         backgroundUrl={`${process.env.PUBLIC_URL}/images/background_logistic_truck.jpg`}
-        phoneE164="+49 30 000000"
-        whatsappE164="+49 30 000000"
-        email="info@luksberlinnakliyat.com"
+        phoneE164="+90 541 596 54 91"
+        whatsappE164="+90 541 596 54 91"
       />
 
       <div className="about-stats">

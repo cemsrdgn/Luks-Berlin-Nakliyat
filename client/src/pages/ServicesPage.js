@@ -9,12 +9,6 @@ const resolveAsset = (path) => {
   return path.startsWith('http') ? path : `${process.env.PUBLIC_URL}/${path.replace(/^\//, '')}`;
 };
 
-const brochureIcons = {
-  pdf: '📄',
-  ppt: '📊',
-  doc: '📝'
-};
-
 const ServicesPage = () => {
   const { categoryId } = useParams();
   const location = useLocation();
@@ -26,7 +20,8 @@ const ServicesPage = () => {
     () =>
       servicesContent.brochure.map((item) => ({
         ...item,
-        label: item.label[lang]
+        label: item.label[lang],
+        description: item.description?.[lang]
       })),
     [lang]
   );
@@ -109,7 +104,7 @@ const ServicesPage = () => {
   };
 
   const openWhatsapp = () => {
-    const number = '+49 30 000 00 00';
+    const number = '+90 541 596 54 91';
     const url = `https://wa.me/${number.replace(/\D/g, '')}?text=${encodeURIComponent(
       lang === 'en'
         ? 'Hello, I would like to learn more about your services.'
@@ -177,11 +172,21 @@ const ServicesPage = () => {
             <ul className="services-brochure-list">
               {brochureItems.map((item) => (
                 <li key={item.id}>
-                  <a href={item.href} target="_blank" rel="noreferrer">
-                    <span className="services-brochure-icon">
-                      {brochureIcons[item.id] || '⬇'}
-                    </span>
-                    {item.label}
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="services-brochure-card"
+                      >
+                        <div className="services-brochure-preview">
+                          <img src={item.asset || item.href} alt={item.label} />
+                        </div>
+                        <div className="services-brochure-copy">
+                          <span className="services-brochure-label">{item.label}</span>
+                          {item.description ? (
+                            <small>{item.description}</small>
+                          ) : null}
+                        </div>
                   </a>
                 </li>
               ))}
@@ -210,11 +215,6 @@ const ServicesPage = () => {
 
         <section className="services-detail">
           <div className="services-detail-card">
-            <div className="services-detail-media">
-              {activeService && (
-                <img src={resolveAsset(activeService.image)} alt={activeService.title} />
-              )}
-            </div>
             <div className="services-detail-content">
               <p className="services-detail-eyebrow">{activeCategory?.title}</p>
               <h2>{activeService?.title}</h2>

@@ -1,19 +1,13 @@
-const sharedFeatureCopy = {
-  tr: [
-    'Detaylı envanter ve değerleme raporu',
-    'Profesyonel risk analizi',
-    'Kapsamlı sigorta planlaması',
-    'Taşıma öncesi durum tespiti',
-    'Taşıma sonrası kontrol raporlaması'
-  ],
-  en: [
-    'Detailed inventory and valuation report',
-    'Professional risk analysis',
-    'Comprehensive insurance planning',
-    'Pre-move condition documentation',
-    'Post-move inspection summaries'
-  ]
-};
+import brochureImagePrimary from '../assets/brochure/logo1.jpeg';
+import brochureImageSecondary from '../assets/brochure/logo2.png';
+import galleryImage1 from '../assets/gallery/1.jpeg';
+import galleryImage2 from '../assets/gallery/2.jpeg';
+import galleryImage3 from '../assets/gallery/3.jpeg';
+import galleryImage4 from '../assets/gallery/4.jpeg';
+import galleryImage5 from '../assets/gallery/5.jpeg';
+import galleryImage6 from '../assets/gallery/6.jpeg';
+import galleryImage7 from '../assets/gallery/7.jpeg';
+import galleryImage8 from '../assets/gallery/8.jpeg';
 
 export const servicesContent = {
   hero: {
@@ -35,27 +29,29 @@ export const servicesContent = {
   },
   brochure: [
     {
-      id: 'pdf',
-      href: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+      id: 'logo1',
+      href: brochureImagePrimary,
+      asset: brochureImagePrimary,
       label: {
-        tr: 'Kurumsal Broşür (PDF)',
-        en: 'Corporate Brochure (PDF)'
+        tr: 'logo1',
+        en: 'logo1'
+      },
+      description: {
+        tr: 'logo1',
+        en: 'logo1'
       }
     },
     {
-      id: 'ppt',
-      href: 'https://filesamples.com/samples/document/pptx/sample1.pptx',
+      id: 'logo2',
+      href: brochureImageSecondary,
+      asset: brochureImageSecondary,
       label: {
-        tr: 'Sunum (PPTX)',
-        en: 'Pitch Deck (PPTX)'
-      }
-    },
-    {
-      id: 'doc',
-      href: 'https://filesamples.com/samples/document/docx/sample3.docx',
-      label: {
-        tr: 'Teklif Şablonu (DOCX)',
-        en: 'Proposal Template (DOCX)'
+        tr: 'logo2',
+        en: 'logo2'
+      },
+      description: {
+        tr: 'logo2',
+        en: 'logo2'
       }
     }
   ],
@@ -63,7 +59,7 @@ export const servicesContent = {
     {
       id: 'address',
       icon: '📍',
-      value: 'Karl-Marx-Allee 90, 10243 Berlin',
+      value: 'Ergenekon Mahallesi, Sanal Sokak 8/6, Yenimahalle / Ankara',
       label: {
         tr: 'Adres',
         en: 'Address'
@@ -72,21 +68,11 @@ export const servicesContent = {
     {
       id: 'phone',
       icon: '☎',
-      value: '+49 30 000 00 00',
-      href: 'tel:+49300000000',
+      value: '+90 541 596 54 91',
+      href: 'tel:+905415965491',
       label: {
         tr: 'Telefon',
         en: 'Phone'
-      }
-    },
-    {
-      id: 'mail',
-      icon: '✉',
-      value: 'info@luksberlinnakliyat.com',
-      href: 'mailto:info@luksberlinnakliyat.com',
-      label: {
-        tr: 'E-posta',
-        en: 'Email'
       }
     },
     {
@@ -99,6 +85,18 @@ export const servicesContent = {
       label: {
         tr: 'Çalışma Saatleri',
         en: 'Working Hours'
+      }
+    },
+    {
+      id: 'coverage',
+      icon: '🚚',
+      value: {
+        tr: 'Türkiye genelinde hizmet sağlıyoruz',
+        en: 'Serving clients all across Turkey'
+      },
+      label: {
+        tr: 'Hizmet Alanı',
+        en: 'Service Area'
       }
     }
   ],
@@ -137,7 +135,7 @@ export const servicesContent = {
   categories: [
     {
       slug: 'domestic',
-      image: 'images/gallery/1.jpg',
+      image: galleryImage1,
       copy: {
         tr: {
           title: 'Yurt İçi Ev ve Ofis Taşımacılığı',
@@ -153,101 +151,293 @@ export const servicesContent = {
       services: [
         {
           id: 'home-moving',
-          image: 'images/gallery/1.jpg',
+          image: galleryImage1,
           copy: {
             tr: {
               title: 'Evden Eve Nakliyat',
               intro:
-                'Paketleme uzmanları, kat izinleri ve sigorta evraklarıyla birlikte tüm eşyalarınız tek plan dahilinde taşınır.',
+                'Uzman ekiplerimiz, paketleme mühendisliği, kat izinleri ve sigortalama süreçlerini tek bir operasyon planında birleştirerek tüm eşyalarınızı güvenle taşır.',
               body: [
-                'Eşyalarınızın değerini biliyoruz. Taşınacak tüm mobilya ve cihazların detaylı envanterini çıkarıyor, değerleme yapıyor ve sigorta kapsamını belirliyoruz.',
-                'Uzman ekibimiz modüler asansör, tekstil askılığı, kırılgan kasa ve beyaz eşya aparatlarıyla adresinize gelir; her aşama fotoğraflı olarak raporlanır.',
-                'Taşıma günü boyunca atanmış operasyon koordinatörü ilerlemeyi sürekli bildirir ve teslimatta kontrol listesi ile son onayınızı alır.'
+                'Taşınacak her eşya için detaylı envanter çıkarır, mobilya ve elektronik cihazlar için değerleme raporu hazırlayıp sigorta kapsamıyla eşleştiririz.',
+                'Modüler asansör sistemleri, tekstil askılıkları, kırılgan eşya kasaları ve beyaz eşya sabitleme aparatlarıyla adresinize gelir, her paketleme adımını fotoğraf/video ile kayıt altına alırız.',
+                'Eşyalar taşınmadan önce durum tespiti yapılır; profesyonel ambalajlama teknikleri ile olası riskler minimuma indirilir.',
+                'Taşıma günü boyunca atanmış operasyon koordinatörünüz tüm ilerlemeyi anlık olarak bildirir ve teslimatta kontrol listesi eşliğinde son onayınızı alır.',
+                'Talep halinde taşıma sonrası eşya yerleşim desteği ve montaj hizmeti de sağlanır.'
               ],
-              features: sharedFeatureCopy.tr
+              features: [
+                'Detaylı envanter ve değerleme raporu',
+                'Profesyonel risk analizi',
+                'Kapsamlı sigorta planlaması',
+                'Taşıma öncesi durum tespiti',
+                'Modüler asansörlü taşıma',
+                'Taşıma sonrası kontrol ve raporlama',
+                'Paketleme sürecinin fotoğraf & video kaydı'
+              ]
             },
             en: {
               title: 'House-to-House Moving',
               intro:
-                'Packing specialists, building permits and insurance paperwork are handled under a single project plan.',
+                'Our expert crews merge packing engineering, floor permits and insurance workflows into a single project plan to move every belonging safely.',
               body: [
-                'We understand how valuable every item is. A detailed inventory and valuation is prepared for all furniture and appliances so the right insurance coverage is in place.',
-                'The crew arrives with modular lifts, garment rails, fragile crates and appliance kits, documenting every step with photos.',
-                'A dedicated coordinator keeps you updated throughout the day and completes delivery with a final checklist for your approval.'
+                'We prepare a detailed inventory and valuation for each furniture or device, then map those records to the correct insurance coverage.',
+                'Crews arrive with modular lifts, garment racks, fragile-item crates and appliance clamps, documenting every packing step with photos and video.',
+                'Before anything leaves your home we log its current condition and apply professional packing techniques to minimize risk.',
+                'A dedicated coordinator sends live updates throughout move day and closes the project with a checklist-based handover.',
+                'If requested we also provide post-move placement support and on-site assembly.'
               ],
-              features: sharedFeatureCopy.en
+              features: [
+                'Detailed inventory and valuation report',
+                'Professional risk analysis',
+                'Comprehensive insurance planning',
+                'Pre-move condition documentation',
+                'Modular lift-enabled moving',
+                'Post-move inspection and reporting',
+                'Photo & video documentation of packing'
+              ]
             }
           }
         },
         {
           id: 'office-moving',
-          image: 'images/gallery/2.jpg',
+          image: galleryImage2,
           copy: {
             tr: {
               title: 'Büro ve Ofis Taşımacılığı',
               intro:
-                'Sunucu kabinetlerinden cam bölmelere kadar numaralandırma, paketleme ve yeni lokasyonda kurulum sağlanır.',
+                'Kurumsal firmalar için geliştirdiğimiz protokollerle elektronik cihazlar, arşiv dosyaları, sunucular ve mobilyalar özel güvenlik prosedürleriyle taşınır.',
               body: [
-                'BT ekipmanları için anti-statik ambalaj, arşiv için kilitli kutular, mobilyalar için kodlu etiketleme kullanıyoruz.',
-                'Yeni lokasyonda kurulum planları önceden çıkarılır; kablolama ve masa yerleşimi aynı gün içinde teslim edilir.',
-                'İnsan kaynaklarıyla koordineli vardiya planları ve kat bazlı geçiş listeleri sayesinde çalışanlar ertesi gün masalarına sorunsuz geçer.'
+                'Her departman için ayrı paketleme planı oluşturur, karışıklığı önlemek için tüm malzemeleri barkodlayıp oda bazlı kategorilere ayırırız.',
+                'IT ekipmanları anti-statik paketlere, sunucular darbe emici kasalara, gizli evraklar kilitli konteynerlere alınır.',
+                'Taşınma mesai sonrası veya hafta sonu gerçekleştirilerek operasyonların aksamaması sağlanır.',
+                'Yeni ofiste mobilya kurulumu, masa düzenleri, kablo yönetimi ve cihazların yeniden devreye alınması tek ekip tarafından tamamlanır.',
+                'Her departman için “Yeniden Yerleşim Raporu” hazırlanarak teslim edilir.'
               ],
               features: [
-                'LAN, server ve UPS söküm/kurulum desteği',
-                'Çift vardiyalı ekip planlaması',
-                'Kat izinleri ve erişim planı yönetimi',
-                'Merkezi iletişim noktası ve canlı takip'
+                'Departman bazlı taşıma planı',
+                'Barkodlu takip ve kategori sistemi',
+                'Anti-statik IT paketleme çözümleri',
+                'Kilitli arşiv kutuları ile güvenli evrak yönetimi',
+                'Mesai dışı / hafta sonu operasyon imkânı',
+                'Yeni ofiste kurulum ve yerleşim desteği',
+                'Kablo & network yeniden düzenleme'
               ]
             },
             en: {
               title: 'Office & Workplace Relocation',
               intro:
-                'From server racks to glass partitions we label, pack and reinstall everything at the new site.',
+                'Purpose-built protocols move all electronics, archives, servers and furniture under strict security procedures for corporate clients.',
               body: [
-                'Anti-static protection for IT gear, locked crates for archives and color-coded labels for furniture keep the move organised.',
-                'Floor plans, cabling and workstation layouts are prepared in advance so teams can plug in the same day.',
-                'Coordinated shift plans and floor-by-floor move lists let your staff return to workstations without disruption.'
+                'We prepare a separate packing plan for every department, barcode all materials and sort them per room to avoid chaos.',
+                'IT hardware goes into anti-static sleeves, servers into shock-absorbing crates and confidential documents into sealed archive containers.',
+                'Moves are scheduled after-hours or on weekends to eliminate downtime.',
+                'Our team handles new-office assembly, desk layouts, cable routing and device commissioning end-to-end.',
+                'Each department receives a “Re-Occupation Report” that documents what was delivered and where it sits.'
               ],
               features: [
-                'LAN, server and UPS de-install/re-install support',
-                'Dual-shift crew planning',
-                'Permit and access management',
-                'Single communication desk with live tracking'
+                'Department-specific move planning',
+                'Barcode-based tracking and categorisation',
+                'Anti-static IT packing solutions',
+                'Secure locked archive carriers',
+                'After-hours / weekend execution',
+                'On-site reinstallation & layout support',
+                'Cable & network reconfiguration'
               ]
             }
           }
         },
         {
           id: 'survey',
-          image: 'images/gallery/3.jpg',
+          image: galleryImage3,
           copy: {
             tr: {
               title: 'Ekspertiz Hizmetleri',
               intro:
-                'Taşıma öncesi keşif ile kat, park, eşya listesi ve riskler aynı gün içinde raporlanır.',
+                'Taşımadan önce ücretsiz ekspertiz ekibimiz adresinize gelerek eşyalarınızın türünü, ağırlığını, hacmini ve hassasiyet seviyesini analiz eder.',
               body: [
-                'Ekspertiz uzmanı adresinize gelerek tüm alanı gezer, kat planı ve paketleme ihtiyaçlarını not alır.',
-                'Çıkan rapor fiyatlandırma, süre ve ekip büyüklüğünü içerir; dilerseniz dijital sözleşme ile süreç başlatılır.',
-                'İş programı, risk senaryoları ve sigorta şartları aynı paket içinde sunulur; böylece karar almadan önce tüm detayları net biçimde görürsünüz.'
+                'Analiz çıktıları doğru ekipman seçimi, personel planlaması ve en uygun taşıma yönteminin belirlenmesi için temel oluşturur.',
+                'Bina giriş çıkışları, merdivenler, asansör kullanımı, sokak genişliği ve kat izinleri incelenir; gerekirse belediye izinleri tarafımızdan organize edilir.',
+                'Müşteriye tüm verilerin yer aldığı detaylı “Operasyon Fizibilite Raporu” sunulur.',
+                'Rapor; toplam süre, ekip sayısı, araç kapasitesi ve sigorta kapsamını içerir.',
+                'Sayesinde taşıma günü sürpriz veya ek ücretle karşılaşma riski ortadan kalkar.'
               ],
-              features: sharedFeatureCopy.tr
+              features: [
+                'Ücretsiz yerinde ekspertiz',
+                'Detaylı fizibilite ve risk analizi',
+                'Kat, sokak ve bina uygunluk kontrolü',
+                'Asansör gereksinimi analiz raporu',
+                'Taşıma planı ve zaman çizelgesi',
+                'Sigorta kapsamı belirleme',
+                'Maliyet ve süre optimizasyonu'
+              ]
             },
             en: {
               title: 'Pre-Move Survey',
               intro:
-                'We document floors, parking, inventory and risks on site and deliver the report the very same day.',
+                'Our free survey crew documents the type, weight, volume and fragility of every item before moving day.',
               body: [
-                'A survey specialist walks through every room, noting lift sizes, packing needs and access restrictions.',
-                'The report outlines pricing, timelines and crew sizes so you can approve the project with clarity.',
-                'Work schedules, risk scenarios and insurance requirements are packaged together for full transparency.'
+                'Those findings dictate the right equipment mix, staffing plan and safest relocation method.',
+                'We inspect entrance/exit points, staircases, elevator options, street width and permitting; municipal permissions are secured when required.',
+                'All details are compiled into a comprehensive Operations Feasibility Report for the client.',
+                'The document outlines total duration, crew size, vehicle capacity and insurance coverage.',
+                'This proactive planning eliminates surprise charges or last-minute delays.'
               ],
-              features: sharedFeatureCopy.en
+              features: [
+                'Complimentary on-site survey',
+                'Detailed feasibility and risk analysis',
+                'Floor, street and building compliance check',
+                'Lift requirement assessment report',
+                'Move plan and timeline definition',
+                'Insurance scope determination',
+                'Cost and duration optimisation'
+              ]
+            }
+          }
+        },
+        {
+          id: 'safe-transport',
+          image: galleryImage2,
+          copy: {
+            tr: {
+              title: 'Kasa Taşımacılığı',
+              intro:
+                'Çelik para kasalarının taşınması ağırlık hesaplaması, bina dayanıklılığı ve güvenlik protokollerinin özel olarak değerlendirilmesini gerektirir.',
+              body: [
+                'Kasa modelinin ağırlığı, altyapı koşulları, kat mesafeleri ve ekipman ihtiyacı önceden analiz edilir; 200–2000 kg aralığındaki kasalar için hidrolik taşıyıcılar, kızak sistemleri ve merdiven paletleri kullanılır.',
+                'Taşıma günü kasa devrilme riskini ortadan kaldıracak şekilde sabitlenir, çelik bariyerlerle çevrilir ve hidrolik krikolarla güvenli biçimde kaldırılır.',
+                'Geçiş noktaları uzmanlar tarafından yönlendirilir; zemin, kapı ve duvarların zarar görmemesi için koruyucu katmanlar uygulanır.',
+                'Araç içine yüklemede çelik sabitleme zincirleri ve vibrasyon azaltıcı sistemler kullanılır; teslimatta kasa belirlenen noktaya yerleştirilip güvenlik kilidi kontrol edilir.',
+                'Tüm süreç sonunda profesyonel raporlama ve teslim tutanağı müşteriye iletilir.'
+              ],
+              features: [
+                'Çelik kasa ağırlık ve fizibilite analizi',
+                'Hidrolik taşıma ekipmanı & özel kızak sistemleri',
+                'Devrilme önleyici sabitleme teknikleri',
+                'Zemin ve bina korumalı taşıma prosedürü',
+                'Araç içi çelik sabitleme zincirleri',
+                'Hassas yerleştirme ve kilit kontrolü',
+                'Profesyonel raporlama ve teslim tutanağı'
+              ]
+            },
+            en: {
+              title: 'Safe Relocation',
+              intro:
+                'Transporting steel safes demands dedicated analysis of weight, building endurance and security protocols.',
+              body: [
+                'We evaluate the safe model, structural conditions, floor distances and equipment needs in advance; hydraulic dollies, sled systems and stair climbers move safes weighing 200–2000 kg.',
+                'On moving day the safe is stabilised to eliminate tipping risk, surrounded with steel barriers and lifted via shock-absorbing hydraulic jacks.',
+                'All transition points are supervised to shield floors, doors and walls with protective layers.',
+                'Inside the truck we use steel chains and vibration-damping systems, then place the safe on the designated spot and verify the lock before handover.',
+                'Every project concludes with professional reporting and a signed delivery protocol.'
+              ],
+              features: [
+                'Safe weight & feasibility analysis',
+                'Hydraulic handling gear and custom sled systems',
+                'Anti-tip stabilisation methods',
+                'Floor and building protection procedures',
+                'In-truck steel chaining system',
+                'Precision placement with lock verification',
+                'Documented reporting & delivery receipt'
+              ]
+            }
+          }
+        },
+        {
+          id: 'precious-goods',
+          image: galleryImage3,
+          copy: {
+            tr: {
+              title: 'Kıymetli ve Değerli Eşya Taşımacılığı',
+              intro:
+                'Mücevher, tablo, sanat eseri, antika ve koleksiyon ürünlerinin taşınması yüksek güvenlik, özel paketleme ve profesyonel sigorta süreçleri gerektirir.',
+              body: [
+                'Her parça için materyal, hassasiyet, nem dayanımı ve kırılganlık analizi yapılır; özel ölçülü ahşap sandıklar, darbe emici iç kaplamalar ve mikro fiber sarma teknikleri kullanılır.',
+                'Sanat eserleri temas etmeyen çerçeve korumalarıyla sabitlenir; mücevher ve küçük objeler mühürlü kasalar ve RFID takip cihazlarıyla araç içi kilitli bölmelere yerleştirilir.',
+                'Araç içi sıcaklık, nem ve vibrasyon sensörlerle izlenir; rota boyunca güvenlik birimleriyle koordinasyon kurulur.',
+                'Zincirleme teslim protokolü uygulanır; teslimatta paketler müşterinin önünde kontrol listesiyle değerlendirilir ve “Hasarsız Teslim Sertifikası” oluşturulur.'
+              ],
+              features: [
+                'Eser bazlı hassasiyet ve risk analizi',
+                'Özel ahşap sandık + darbe emici kaplama',
+                'Nem, ısı ve vibrasyon kontrollü taşıma',
+                'Mücevher için mühürlü kasa & RFID takip',
+                'Sanat eserleri için temas etmeyen çerçeve',
+                'Zincirleme teslim (Chain of Custody) protokolü',
+                'Hasarsız teslimat belgesi'
+              ]
+            },
+            en: {
+              title: 'Precious & High-Value Goods Moving',
+              intro:
+                'Jewellery, artwork, antiques and bespoke collectibles require high-security handling, specialised packing and professional insurance workflows.',
+              body: [
+                'We analyse each item’s material, sensitivity, humidity tolerance and fragility, then build custom wood crates with shock-absorbing liners and microfiber wrapping.',
+                'Art pieces are secured with non-contact frames, while jewellery or small valuables travel in sealed cases with RFID trackers inside locked vehicle compartments.',
+                'Vehicle temperature, humidity and vibration are sensor-monitored, and we coordinate with security units along the route.',
+                'A full chain-of-custody protocol is enforced; at delivery we inspect items with the client and issue a “Damage-Free Delivery Certificate”.'
+              ],
+              features: [
+                'Item-specific sensitivity & risk analysis',
+                'Custom wooden crates with shock lining',
+                'Temperature, humidity & vibration control',
+                'Sealed jewellery vaults with RFID tracking',
+                'Non-contact frame protection for art',
+                'Chain-of-custody handling protocol',
+                'Damage-free delivery certificate'
+              ]
+            }
+          }
+        },
+        {
+          id: 'loading-support',
+          image: galleryImage4,
+          copy: {
+            tr: {
+              title: 'Yükleme, Boşaltma ve Destek Hizmetleri',
+              intro:
+                'Profesyonel yükleme–boşaltma ekibimiz eşyalarınızı ağırlık merkezi analizleri ve hassasiyet sınıflandırmalarıyla tek operasyon planı altında yönetir.',
+              body: [
+                'Ağır mobilyalar, beyaz eşyalar, çelik kasalar, elektronik cihazlar ve kırılgan ürünler için ayrı teknikler uygulanır; kaldırma öncesi ağırlık merkezi hesaplanır ve doğru kaldıraç yöntemi seçilir.',
+                'Boşaltma sürecinde eşyalar önceden hazırlanmış yerleşim planına göre indirilir, mobilyalar numaralandırılarak montaj alanlarına yönlendirilir.',
+                'Kat izinleri, bina koruma önlemleri, asansör kullanımı ve zemin kaplamaları taşımadan önce kontrol edilir; geçiş noktalarına koruma bariyerleri yerleştirilir.',
+                'Destek ekipleri ağır eşyaların konumlandırılması, mobilya yerleşimi, beyaz eşyaların bağlanması ve gerekli teknik işlemleri gerçekleştirir.',
+                'Araç içi yük dengelemesi yapılarak yol boyunca devrilme veya hasar riski ortadan kaldırılır; teslimatta müşteri ile birlikte kontrol tutanağı hazırlanır.'
+              ],
+              features: [
+                'Profesyonel yükleme–boşaltma ekibi',
+                'Ağırlık merkezi analizi ve doğru kaldırma teknikleri',
+                'Zemin, kapı ve bina koruma uygulamaları',
+                'Araç içi yük sabitleme ve ağırlık dengeleme',
+                'Kat planına göre yerleşim desteği',
+                'Montaj-demontaj ve teknik destek',
+                'Taşıma sonrası kontrol tutanağı'
+              ]
+            },
+            en: {
+              title: 'Loading, Unloading & Support Services',
+              intro:
+                'Our professional crews manage the entire loading/unloading process under one plan by analysing weight distribution and sensitivity classes.',
+              body: [
+                'Heavy furniture, appliances, safes, electronics and fragile items get dedicated handling techniques; the center of gravity is calculated before lifting and the proper leverage method is chosen.',
+                'At destination we unload according to the pre-defined layout plan and route numbered furniture pieces to their assembly zones.',
+                'Floor protection, elevator usage, permits and doorways are inspected in advance, with barrier padding applied to every passage.',
+                'Support teams handle heavy-item positioning, furniture placement, appliance hookups and any required technical tasks.',
+                'Loads are balanced inside the truck to prevent tipping and a post-move checklist is completed with the client.'
+              ],
+              features: [
+                'Experienced loading/unloading crews',
+                'Center-of-gravity analysis & correct lifting methods',
+                'Floor, doorway and building protection',
+                'In-truck load securing and weight balancing',
+                'Layout-driven placement assistance',
+                'Assembly/disassembly & technical support',
+                'Post-move inspection report'
+              ]
             }
           }
         },
         {
           id: 'packing',
-          image: 'images/gallery/4.jpg',
+          image: galleryImage4,
           copy: {
             tr: {
               title: 'Ambalaj ve Depolama',
@@ -284,323 +474,383 @@ export const servicesContent = {
       ]
     },
     {
-      slug: 'storage',
-      image: 'images/gallery/2.jpg',
-      copy: {
-        tr: {
-          title: 'Yurt İçi Depolama Hizmetleri',
-          description:
-            'Stok yönetimi, sipariş hazırlama ve özel depolama çözümlerinde barkodlu takip ve raporlama sağlar.'
-        },
-        en: {
-          title: 'Domestic Storage Services',
-          description:
-            'Barcode-driven stock management, order fulfilment and tailored storage programs with full reporting.'
-        }
-      },
-      services: [
-        {
-          id: 'warehouse-management',
-          image: 'images/gallery/3.jpg',
-          copy: {
-            tr: {
-              title: 'Depo Yönetimi',
-              intro: 'Barkod, RFID ve WMS entegrasyonlarıyla stoklarınızı uçtan uca yönetiyoruz.',
-              body: [
-                'Sipariş girişinden sevkiyata kadar her adım taranır, müşteri panelinden canlı takip edilir.',
-                'Günlük KPI raporları ve dönemsel sayım hizmetiyle depo performansını sürekli ölçüyoruz.',
-                'Sevkiyat yoğunluğunu tahmin eden raporlar sayesinde personel ve araç planlamasını proaktif olarak öneriyoruz.'
-              ],
-              features: [
-                'WMS & ERP entegrasyonu',
-                'Barkod/RFID altyapısı',
-                'Cycle count ve sayım raporları',
-                'SLA bazlı picker yönetimi'
-              ]
-            },
-            en: {
-              title: 'Warehouse Management',
-              intro: 'We run your inventory end-to-end with barcode, RFID and WMS integrations.',
-              body: [
-                'Every stage from order intake to dispatch is scanned and visible in your customer dashboard.',
-                'Daily KPIs and periodic counts keep performance transparent.',
-                'Forecasting reports suggest proactive staffing and vehicle allocation before peaks arrive.'
-              ],
-              features: [
-                'WMS & ERP integration',
-                'Barcode / RFID infrastructure',
-                'Cycle-count and audit reports',
-                'SLA-based picker management'
-              ]
-            }
-          }
-        },
-        {
-          id: 'rental-space',
-          image: 'images/gallery/4.jpg',
-          copy: {
-            tr: {
-              title: 'Kiralık Depo Alanı',
-              intro: 'Metrekare bazlı, iklim kontrollü depoları kısa ya da uzun süreli kiralayabilirsiniz.',
-              body: [
-                'Nem ve sıcaklık sensörleri 7/24 takip edilir, müşteriye periyodik rapor gönderilir.',
-                'Güvenli giriş, yangın algılama ve sigorta seçenekleri standart gelir.',
-                'İhtiyacınız olduğunda alan büyütme veya küçültme seçeneğiyle depolama maliyetlerinizi esnek şekilde yönetebilirsiniz.'
-              ],
-              features: [
-                'Farklı metrekare seçenekleri',
-                '7/24 kamera ve alarm sistemi',
-                'Sigorta destekli sözleşme',
-                'Paylaşımlı forklift ve personel'
-              ]
-            },
-            en: {
-              title: 'Rental Storage Space',
-              intro: 'Rent temperature-controlled units for short or long terms in flexible sizes.',
-              body: [
-                'Humidity and temperature sensors are monitored around the clock with periodic customer reports.',
-                'Secure access, fire detection and insurance options are included as standard.',
-                'Scale the footprint up or down whenever needed to optimise storage costs.'
-              ],
-              features: [
-                'Multiple square-meter options',
-                '24/7 CCTV and alarm system',
-                'Insurance-backed contracts',
-                'Shared forklift and staffing support'
-              ]
-            }
-          }
-        },
-        {
-          id: 'packing-crating',
-          image: 'images/gallery/5.jpg',
-          copy: {
-            tr: {
-              title: 'Paketleme ve Sandıklama',
-              intro: 'Sanayi ekipmanları ve sanat eserleri için özel sandık ve vakumlu paketleme hizmeti.',
-              body: [
-                'Çelik köşebent, OSB ve köpük katmanlarıyla darbe emici kasalar hazırlıyoruz.',
-                'Tüm kasa ölçüleri projeye özel kesilir ve dış yüzeyi işaretlenir.',
-                'Uçtan uca süreçte ihracat evrakı, etiketleme ve taşıma sigortası için gerekli belgeler tek dosyada tarafınıza teslim edilir.'
-              ],
-              features: [
-                'CNC ile hazırlanan kasalar',
-                'ISPM 15 sertifikalı ahşap',
-                'Nem bariyerli vakum ambalaj',
-                'Yerinde montaj ve mühürleme'
-              ]
-            },
-            en: {
-              title: 'Packing & Crating',
-              intro: 'Custom crating and vacuum packing for industrial equipment and artwork.',
-              body: [
-                'Shock-absorbing crates are built with steel brackets, OSB panels and foam layers.',
-                'Each crate is cut to project-specific dimensions and clearly labelled.',
-                'Export paperwork, labelling and insurance documents are delivered in one dossier.'
-              ],
-              features: [
-                'CNC manufactured crates',
-                'ISPM 15 certified timber',
-                'Moisture-barrier vacuum wrapping',
-                'On-site assembly and sealing'
-              ]
-            }
-          }
-        },
-        {
-          id: 'inventory',
-          image: 'images/gallery/1.jpg',
-          copy: {
-            tr: {
-              title: 'Sayım & Envanter',
-              intro: 'Bağımsız ekiplerimiz stok doğrulaması ve reconciliation raporları hazırlar.',
-              body: [
-                'ABC analizi, yaşlandırma ve kayıp-kaçak tabloları ile stok doğruluğunu ölçeriz.',
-                'Sonuçlar yönetici özetleriyle paylaşılır ve aksiyon planı öneririz.',
-                'Bulduğumuz sapmalar için düzeltici eylem planlarını, sorumlu ekipleri ve takvimleri içeren detaylı bir yol haritası sunuyoruz.'
-              ],
-              features: [
-                'El terminali ile gerçek zamanlı sayım',
-                'Bağımsız denetim raporu',
-                'Uçtan uca reconciliation takibi',
-                'SAP / Netsis entegrasyonu'
-              ]
-            },
-            en: {
-              title: 'Inventory & Counting',
-              intro: 'Independent teams deliver stock verification and reconciliation reports.',
-              body: [
-                'ABC analysis, aging and shrink reports keep accuracy visible.',
-                'Findings are summarised for managers with recommended actions.',
-                'Each variance triggers a corrective roadmap with owners and target dates.'
-              ],
-              features: [
-                'Real-time counts with handheld terminals',
-                'Independent audit reporting',
-                'End-to-end reconciliation tracking',
-                'SAP / Netsis integration'
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       slug: 'logistics',
-      image: 'images/gallery/5.jpg',
+      image: galleryImage5,
       copy: {
         tr: {
           title: 'Lojistik Destek Hizmetleri',
           description:
-            'Proje lojistiği, etkinlik ve saha operasyonlarında rota izinleri, saha ekipleri ve raporlamayı tek çatı altında yönetiyoruz.'
+            'Depolama, sevkiyat, rota planlama ve operasyon destek hizmetlerini tek merkezden koordine ediyoruz.'
         },
         en: {
           title: 'Logistics Support Services',
           description:
-            'Route permits, event logistics and field operations managed under one coordination team.'
+            'Centralised storage, dispatch, routing and operations support for your business.'
         }
       },
       services: [
         {
-          id: 'project-logistics',
-          image: 'images/gallery/2.jpg',
+          id: 'logistics-support-core',
+          image: galleryImage5,
           copy: {
             tr: {
-              title: 'Proje Lojistiği',
-              intro: 'Ağır ekipman ve şantiye taşımalarında rota izinleri ve saha koordinasyonu sağlanır.',
+              title: 'Lojistik Destek Hizmetleri',
+              intro:
+                'Depolama, sevkiyat koordinasyonu, rota planlama, yük optimizasyonu ve operasyon destek hizmetlerini tek merkezden yönetiyoruz.',
               body: [
-                'Çok akslı low-bed araçlar, eskort planı ve izin dosyalarını biz hazırlarız.',
-                'Şantiye teslimlerinde vinç, forklift ve saha güvenliğini tek merkezden koordine ederiz.',
-                'Uluslararası proje yüklerinde gümrük partnerlerimizle birlikte tek iletişim noktasından süreçleri yönetiyoruz.'
+                'Mal kabulden yükleme–boşaltmaya kadar tüm adımlar barkodlu sistemler üzerinden kontrol edilir; ürünler kategori bazlı ayrıştırılarak uygun koşullarda saklanır.',
+                'Rota optimizasyonu, araç kapasitesi, yük dengelemesi ve zamanlama planlaması yapılır; trafik yoğunluğu ve bekleme noktaları anlık takip edilir.',
+                'GPS destekli filo yönetimiyle tüm araçların konumu izlenir; teslimat sonrası raporlama, iade ve hasar yönetimi operasyon destek ekibi tarafından koordine edilir.',
+                'Bu yapı sayesinde tüm lojistik döngünüz uçtan uca dijital olarak kontrol edilir; hız, maliyet ve verimlilik artar.'
               ],
               features: [
-                'Güzergâh izin yönetimi',
-                'Saha güvenlik koordinasyonu',
-                'Vinç ve ekipman planlaması',
-                '7/24 dispatch merkezi'
+                'Depolama, stok ve barkodlu ürün yönetimi',
+                'Rota optimizasyonu ve araç kapasite planlaması',
+                'GPS destekli filo yönetimi',
+                'Sevkiyat takip ve teslimat doğrulama',
+                'İade–hasar yönetimi ve raporlama',
+                'Yükleme–boşaltma koordinasyonu',
+                'Zaman yönetimine dayalı operasyon planı'
               ]
             },
             en: {
-              title: 'Project Logistics',
-              intro: 'Heavy equipment and construction moves with full permit and site coordination.',
+              title: 'Core Logistics Support',
+              intro:
+                'We centralise storage, dispatch coordination, route planning, load optimisation and operational support.',
               body: [
-                'We prepare low-bed vehicle plans, escort schedules and permit dossiers.',
-                'Cranes, forklifts and site safety teams are coordinated from one control tower.',
-                'For international loads we partner with customs brokers so you have a single point of contact.'
+                'From inbound receiving to loading and unloading, every step is controlled via barcode systems and category-based storage conditions.',
+                'Route optimisation, truck capacity, load balancing and timing plans are prepared while traffic and dwell times are monitored live.',
+                'GPS-enabled fleet management tracks every vehicle and the support team coordinates post-delivery reporting, returns and damage analysis.',
+                'As a result your entire logistics cycle is digitally controlled end-to-end for maximum speed, cost efficiency and performance.'
               ],
               features: [
-                'Route & permit management',
-                'On-site safety coordination',
-                'Crane and equipment planning',
-                '24/7 dispatch centre'
+                'Storage, stock and barcode-driven item management',
+                'Route optimisation and capacity planning',
+                'GPS-based fleet visibility',
+                'Shipment tracking and proof of delivery',
+                'Returns and damage handling with reporting',
+                'Loading/unloading coordination',
+                'Time-driven operations planning'
               ]
             }
           }
         },
         {
-          id: 'event-support',
-          image: 'images/gallery/3.jpg',
+          id: 'packing-service',
+          image: galleryImage5,
           copy: {
             tr: {
-              title: 'Fuar & Etkinlik Desteği',
-              intro: 'Fuar standları, roadshow ve pop-up mağazalar için teslimat-kurulum hizmeti.',
+              title: 'Ambalajlama ve Paketleme Hizmetleri',
+              intro:
+                'Eşyalarınızın güvenliği, doğru paketleme malzemeleri ve profesyonel tekniklerle başlar.',
               body: [
-                'Stant parçaları barkodlanır, araçlar randevuya göre alana yönlendirilir.',
-                'Kurulum sonrası geri toplama ve depolama için tek ekip atanır.',
-                'Event ajansları için raporlamalar; kurulum, etkinlik ve söküm aşamalarını kapsayan fotoğraf ve imza tutanakları içerir.'
+                'Cam, porselen, elektronik, mobilya, tekstil ve beyaz eşya gibi her kategori; anti-statik ambalajlar, darbe emici köpükler, hava kanallı balonlu naylonlar, köşe koruyucular ve çok katmanlı streç filmlerle sınıflandırılır.',
+                'Paketleme süreci düzen ve hızlı yerleşimi destekleyecek şekilde optimize edilir; tüm kutular numaralandırılır, içerik bilgisi yazılır ve renk kodlu etiket sistemi uygulanır.',
+                'Tekstil ürünleri askılı dolap kutularına, kitap ve arşivler sıkıştırmalı kutulara, TV ve beyaz eşyalar köpük destekli ambalajlara sabitlenir; demontaj gerektiren mobilyalar kaplama malzemeleriyle tamamen sarılır.',
+                'Tüm süreç fotoğraf/video ile belgelenerek müşteriye dijital rapor olarak sunulur; araç içine yüklemede hassas kutular özel bölmelere, ağır kutular alt katmana yerleştirilir.',
+                'Varış adresinde kutular doğrudan ilgili odalara taşınarak yerleşim hızlandırılır.'
               ],
               features: [
-                'Kurulum ve söküm ekipleri',
-                'Roadshow rota planlaması',
-                'Fotoğraflı raporlama',
-                'Ara stoklama desteği'
+                'Eşya türüne göre profesyonel ambalaj sınıflandırması',
+                'Darbe emici ve anti-statik özel malzemeler',
+                'Numara – kategori – renk kodlu etiket sistemi',
+                'Demontaj, koruma ve özel kaplama teknikleri',
+                'Askılı tekstil dolapları ve sıkıştırmalı arşiv kutuları',
+                'Elektronikler için köpük destekli güvenlik ambalajı',
+                'Fotoğraflı paketleme raporu ve durum tespiti'
               ]
             },
             en: {
-              title: 'Fair & Event Support',
-              intro: 'Deliveries, installations and reverse logistics for fairs, roadshows and pop-ups.',
+              title: 'Professional Packing & Wrapping',
+              intro: 'Safety starts with the right materials and methods for every item type.',
               body: [
-                'Stand components are barcoded and vehicles are dispatched per time slot.',
-                'The same crew handles dismantling and short-term storage after the show.',
-                'Agencies receive photographic and signed reports covering build, live days and tear-down.'
+                'Glass, porcelain, electronics, furniture, textiles and appliances are classified with anti-static wraps, shock-absorbing foams, ventilated bubble films, corner protectors and multi-layer stretch.',
+                'Packing is optimised for organisation: every box is numbered, labelled and colour-coded, textiles travel in wardrobe boxes, archives in compression cartons, and TVs or appliances in foam-backed shells.',
+                'Modular furniture is dismantled and fully wrapped; the entire process is documented with photos/videos and shared digitally.',
+                'During loading fragile boxes go to dedicated compartments, heavy boxes form the base layer, and boxes are delivered directly to the target rooms to speed up unpacking.'
               ],
               features: [
-                'Setup & dismantle crews',
-                'Roadshow routing support',
-                'Photo-based reporting',
-                'Buffer storage options'
+                'Professional packing classes per item type',
+                'Shock-absorbing & anti-static specialty materials',
+                'Number / category / colour-coded labelling',
+                'Dismantling, protection and custom wrapping',
+                'Wardrobe boxes and compression archive crates',
+                'Foam-backed protection for electronics & appliances',
+                'Photo-documented packing report and condition log'
               ]
             }
           }
         },
         {
-          id: 'dedicated-dispatch',
-          image: 'images/gallery/4.jpg',
+          id: 'lift-service',
+          image: galleryImage6,
           copy: {
             tr: {
-              title: '7/24 Dispatch',
-              intro: 'Gerçek zamanlı araç ve ekip koordinasyonu, SLA takibi ve alarm yönetimi.',
+              title: 'Asansör Hizmetleri',
+              intro:
+                'Modüler dış cephe asansörümüzle yüksek katlı binalarda hızlı, güvenli ve hasarsız taşıma sağlarız.',
               body: [
-                'Araçlar telematik sistemlerle izlenir; sapma durumunda müşteriye otomatik bildirim gider.',
-                'Sürüş ve dinlenme süreleri merkezi sistemde kontrol edilir.',
-                'Operasyon merkezimiz rota optimizasyonunu sürekli yeniler, gecikme riskine göre yedek araç ve sürücü planları sunar.'
+                'Dar merdivenler veya yetersiz bina asansörü kullanılmadan eşyalar balkon veya geniş pencereden taşınır; çizik, darbe ve sıkışma riski ortadan kalkar.',
+                'Kurulum öncesi bina cephesi, zemin eğimi, erişilebilirlik ve güvenlik koşulları analiz edilir; asansör konumu, çıkış yönü ve rüzgâr etkisi keşif ekibi tarafından raporlanır.',
+                'Taşıma günü profesyonel ekip asansörü kurup test eder, güvenlik kilitlerini kontrol eder ve özel taşıma kasalarıyla eşyaları sabitler.',
+                'Balkon veya pencerede görevli ekipler eşyaların içeri alınmasını sağlar; operasyon hızlı ilerlerken bina ile temas minimuma indirilir.'
               ],
               features: [
-                'Canlı lokasyon ve hız verisi',
-                'SLA ihlal uyarıları',
-                'Sürücü vardiya planı',
-                'Çağrı merkezi entegrasyonu'
+                'Modüler dış cephe asansör kurulum & yönetimi',
+                'Yüksek katlarda hızlı ve hasarsız taşıma',
+                'Bina içi merdiven/asansör kullanımına gerek kalmaması',
+                'Yükseklik ve zemin güvenlik analizi',
+                'Özel taşıma kasaları ve sabitleme aparatları',
+                'Profesyonel operatör ve güvenlik ekibi',
+                'Hızlı indirme–yükleme ile zaman tasarrufu'
               ]
             },
             en: {
-              title: '24/7 Dispatch',
-              intro: 'Real-time fleet coordination with SLA tracking and alert management.',
+              title: 'External Lift Services',
+              intro: 'Our modular facade lift makes high-rise moves fast, safe and damage-free.',
               body: [
-                'Telematics feeds power live dashboards and automated deviation alerts to customers.',
-                'Drive and rest periods are monitored centrally for compliance.',
-                'The control tower refreshes routes constantly and proposes backup vehicles or drivers when delays threaten.'
+                'Without using narrow stairwells or undersized building elevators, items travel directly through balconies or wide windows, eliminating scratches or impacts.',
+                'Prior to move day we analyse the facade, ground slope, access and safety clearances to determine lift placement, exit direction and wind tolerance.',
+                'On the day of the move, certified operators install, test and lock the lift, loading items with dedicated crates and restraint systems.',
+                'Teams stationed at the balcony or window receive each load and guide it indoors, keeping the building contact minimal while saving time.'
               ],
               features: [
-                'Live location and speed data',
-                'Instant SLA breach notifications',
-                'Driver shift scheduling',
-                'Call-centre integration'
+                'Modular exterior lift setup and supervision',
+                'Rapid, damage-free handling on high floors',
+                'No use of internal stairs or elevators',
+                'Height and ground safety assessments',
+                'Special carry crates and restraint gear',
+                'Professional lift operators and safety crew',
+                'Time-saving loading/unloading cycles'
               ]
             }
           }
         },
         {
-          id: 'field-supervision',
-          image: 'images/gallery/5.jpg',
+          id: 'project-transport',
+          image: galleryImage7,
           copy: {
             tr: {
-              title: 'Saha Süpervizyonu',
-              intro: 'Çok dilli saha temsilcileri yükleme-boşaltma süreçlerini denetler.',
+              title: 'Proje Taşımacılığı',
+              intro:
+                'Ağır yük, fabrika ekipmanı, makine, inşaat malzemesi ve özel boyutlu yükler için mühendislik analizine dayalı proje taşımacılığı sunuyoruz.',
               body: [
-                'Operasyon boyunca fotoğraflı ve imzalı rapor tutulur.',
-                'Müşteri temsilcisi sahada bulunur; her adım anlık olarak paylaşılır.',
-                'Saha ekipleri müşterinizden gelen son dakika revizyonlarını yerinde çözer ve raporlar aynı gün içinde paylaşılır.'
+                'Her proje için saha keşfi yaparak yükün ağırlık merkezi, bağlama noktaları, kaldırma kapasitesi ve güzergâh eğimini inceleriz; köprü ve tünel geçiş uygunluklarını teknik ekibimiz değerlendirir.',
+                'Lowbed araçlar, özel platform dorseler, vinçler ve hidrolik kaldırma sistemleriyle yükler güvenli şekilde taşınır.',
+                'Yanal kayma ve titreşim riskini azaltmak için özel bağlama sistemleri kullanılır; gerektiğinde polis eskortu, yol izinleri ve güzergâh güvenliği sağlanır.',
+                'Yükleme–taşıma–indirme adımlarının tamamı teknik raporlarla desteklenir, operasyon koordinatörü ve mühendisler süreci uçtan uca yönetir.'
               ],
               features: [
-                'Yerinde müşteri temsilcisi',
-                'Fotoğraflı teslim raporları',
-                'Çok dilli saha ekibi',
-                'Anlık durum güncellemeleri'
+                'Yük mühendisliği ve detaylı saha keşfi',
+                'Lowbed ve platform dorse çözümleri',
+                'Vinç ve hidrolik kaldırma sistemleri',
+                'Yol izinleri, eskort ve güzergâh planlaması',
+                'Ağır yük sabitleme ve güvenlik önlemleri',
+                'Teknik raporlama ve operasyon koordinasyonu',
+                'Anlık GPS takip ve teslim doğrulama'
               ]
             },
             en: {
-              title: 'Field Supervision',
-              intro: 'Multilingual supervisors oversee loading and unloading on site.',
+              title: 'Project Transport',
+              intro:
+                'We handle heavy loads, factory equipment, machinery, construction materials and oversized cargo through engineering-led project transport.',
               body: [
-                'Photo-backed reports and signed handovers are produced throughout the job.',
-                'A customer representative stays on site so every step is shared instantly.',
-                'Last-minute change requests from your client are resolved on the spot and reported the same day.'
+                'For every project we survey the site, analysing centre of gravity, lashing points, lift capacity, route gradients and bridge/tunnel clearances.',
+                'Lowbed trailers, special platforms, cranes and hydraulic lifting systems move cargo safely door to door.',
+                'Custom lashing systems minimise lateral shift and vibration; police escorts, route permits and corridor security are arranged when required.',
+                'All stages—from loading to transit and unloading—are backed by technical reports and managed by engineers and an operations coordinator.'
               ],
               features: [
-                'On-site customer liaison',
-                'Photo-documented delivery reports',
-                'Multilingual field teams',
-                'Real-time status updates'
+                'Load engineering and detailed site surveys',
+                'Lowbed and platform trailer solutions',
+                'Cranes and hydraulic lifting systems',
+                'Route permits, escorts and corridor planning',
+                'Heavy-load securing and safety setup',
+                'Technical reporting and operations coordination',
+                'Live GPS tracking and delivery confirmation'
+              ]
+            }
+          }
+        },
+        {
+          id: 'distribution-support',
+          image: galleryImage8,
+          copy: {
+            tr: {
+              title: 'Taşıma, Dağıtım ve Destek Hizmetleri',
+              intro:
+                'Günlük veya bölgesel dağıtım operasyonlarında ürün ayrıştırma, araç kapasite planlaması ve rota optimizasyonu yapıyoruz.',
+              body: [
+                'Ürünler barkodlanarak teslimat adreslerine göre gruplanır; günlük, haftalık veya bölgesel dağıtım planları işletmenizin hacmine göre hazırlanır.',
+                'Profesyonel sürücü ve operasyon ekibi müşteri adreslerine zamanında ulaşımı garanti eder; kırılgan ve hassas ürünler için özel bölmeli veya ısı kontrollü araçlar kullanılır.',
+                'Teslimatlar dijital cihazlar üzerinden kayıt altına alınır; operasyon merkezi tüm rotaları eş zamanlı izler ve gecikme riskine karşı alternatif planlar devreye alır.',
+                'Müşteri bilgilendirmeleri, iade yönetimi ve raporlama süreçleri tek merkezden koordine edilir.'
+              ],
+              features: [
+                'Bölgesel ve günlük dağıtım planlaması',
+                'Barkodlu ayrıştırma ve yükleme yönetimi',
+                'Rota optimizasyonu ve zaman yönetimi',
+                'Isı kontrollü veya özel tasarım taşıma araçları',
+                'Dijital teslimat doğrulama sistemi',
+                'İade ve müşteri bilgilendirme süreçleri',
+                'Operasyon merkezi üzerinden anlık takip'
+              ]
+            },
+            en: {
+              title: 'Transport, Distribution & Support',
+              intro:
+                'We design and operate daily or regional distribution with product sorting, capacity planning and route optimisation.',
+              body: [
+                'All items are barcoded and grouped per delivery address, then organised into daily, weekly or regional delivery plans aligned with your volume.',
+                'Professional drivers and coordinators ensure on-time arrivals, using temperature-controlled or compartmentalised vehicles for fragile or perishable goods.',
+                'Deliveries are captured on digital devices while the operations centre monitors all routes in real time and triggers contingency plans when delays appear.',
+                'Customer notifications, returns handling and reporting are coordinated from a single hub.'
+              ],
+              features: [
+                'Regional and daily distribution planning',
+                'Barcode-based sorting and loading control',
+                'Route optimisation and timing management',
+                'Temperature-controlled or custom vehicle setups',
+                'Digital proof-of-delivery system',
+                'Return handling and customer updates',
+                'Real-time monitoring from the operations centre'
+              ]
+            }
+          }
+        },
+        {
+          id: 'assembly-services',
+          image: galleryImage8,
+          copy: {
+            tr: {
+              title: 'Montaj ve Demontaj Hizmetleri',
+              intro:
+                'Mobilya, beyaz eşya, ofis ekipmanları ve modüler sistemler için profesyonel söküm–kurulum ekipleriyle çalışıyoruz.',
+              body: [
+                'Taşınma öncesi tüm parçalar sökülüp numaralandırılır; vidalar ve bağlantı aparatları ayrı poşetlerde saklanır, mevcut durum fotoğraflanarak kayıt altına alınır.',
+                'Yeni adreste mobilyalar çiziksiz ve hasarsız şekilde açılır; üretici standartlarına uygun olarak terazisinde kurulur, dolap ve kapak ayarları yapılır.',
+                'Beyaz eşyalar elektrik ve su tesisatına uygun biçimde bağlanır; ofislerde masa düzenleri departman planına göre yerleştirilir.',
+                'Duvar, zemin ve kaplama yüzeylerinin korunması için özel izolasyon malzemeleri kullanılır; süreç sonunda “Kurulum Kontrol Listesi” müşteriye teslim edilir.'
+              ],
+              features: [
+                'Profesyonel söküm ve numaralandırma sistemi',
+                'Üretici standartlarına uygun montaj',
+                'Mobilya ve ofis modüllerinde terazileme ve ayar',
+                'Beyaz eşya su–elektrik bağlantı desteği',
+                'Yüzey güvenliği için özel koruma malzemeleri',
+                'Fotoğraflı demontaj–montaj raporu',
+                'Kurulum kontrol listesi ile teslimat'
+              ]
+            },
+            en: {
+              title: 'Assembly & Disassembly Services',
+              intro:
+                'We provide professional crews for dismantling and reassembling furniture, appliances, office equipment and modular systems.',
+              body: [
+                'Before moving, all components are dismantled and numbered; screws and fittings are stored in labelled bags and the original setup is documented with photos.',
+                'At the new site we unpack items damage-free and reassemble them according to manufacturer specifications, levelling furniture and adjusting doors or cabinets.',
+                'Appliances are connected to power and water safely, and office layouts are rebuilt according to department plans.',
+                'Walls, floors and finishes are protected with dedicated isolation materials and the client receives a “Setup Checklist” at handover.'
+              ],
+              features: [
+                'Professional disassembly with numbered components',
+                'Assembly in line with manufacturer standards',
+                'Levelling and adjustment for furniture & office modules',
+                'Water/electric hook-up support for appliances',
+                'Surface protection with dedicated materials',
+                'Photo-documented disassembly/assembly report',
+                'Delivery with setup checklist'
+              ]
+            }
+          }
+        },
+        {
+          id: 'maintenance-services',
+          image: galleryImage2,
+          copy: {
+            tr: {
+              title: 'Bakım ve Onarım Hizmetleri',
+              intro:
+                'Taşınma veya kurulum sonrası bütün ekipmanların uzun ömürlü ve güvenli çalışması için profesyonel bakım–onarım desteği sağlıyoruz.',
+              body: [
+                'Mobilya mekanizmaları, menteşeler, ray sistemleri, masa bağlantıları, dolap kapak ayarları, beyaz eşya bağlantıları ve elektrik–su tesisatına bağlı parçalar tek tek kontrol edilir.',
+                'Gevşeme, dengesizlik, çizilme, kapak ayarsızlığı veya bağlantı hataları giderilir; mobilyalar terazisinde ayarlanır, raf sistemleri güçlendirilir, beyaz eşya ve elektronik cihazlardaki titreşim/gürültü sorunları çözülür.',
+                'Süreç, müşteriye teslim edilen “Genel Sistem Kontrol Raporu” ile tamamlanır; rapor yapılan ayarları, onarılan parçaları ve geleceğe yönelik bakım önerilerini içerir.',
+                'Periyodik bakım talep eden müşteriler için planlama yapılır ve sonraki ziyaretler hatırlatılarak sistemler stabil tutulur.'
+              ],
+              features: [
+                'Mobilya ayar, kalibrasyon ve dengeleme',
+                'Dolap, masa, ray ve mekanik aksam onarımı',
+                'Beyaz eşya, TV ve cihaz bağlantı kontrolü',
+                'Küçük parça değişimi ve bağlantı güçlendirme',
+                'Elektrik – su bağlantı güvenliği denetimi',
+                'Genel Sistem Kontrol Raporu teslimi',
+                'Periyodik bakım planlama imkânı'
+              ]
+            },
+            en: {
+              title: 'Maintenance & Repair Services',
+              intro:
+                'After the move or installation we keep every component running safely with professional maintenance and repair routines.',
+              body: [
+                'Furniture mechanisms, hinges, runners, desktop joints, cabinet doors, appliance hookups and plumbing/electrical interfaces are inspected individually.',
+                'Issues like loosening, imbalance, scratches, misaligned doors or faulty connections are corrected; furniture is levelled, drawers reinforced and appliances retuned for vibration or noise.',
+                'We finish with a “General System Control Report” outlining adjustments, replaced parts and future upkeep suggestions, plus optional periodic maintenance plans.'
+              ],
+              features: [
+                'Furniture calibration, levelling and balancing',
+                'Cabinet, table, runner and mechanical repairs',
+                'Verification of appliance, TV and device connections',
+                'Minor parts replacement and fastener reinforcement',
+                'Electrical and plumbing safety checks',
+                'Delivery of a General System Control Report',
+                'Scheduled periodic maintenance options'
+              ]
+            }
+          }
+        },
+        {
+          id: 'technical-support',
+          image: galleryImage3,
+          copy: {
+            tr: {
+              title: 'Teknik Destek Hizmetleri',
+              intro:
+                'Taşıma, kurulum veya yerleşim sürecinde ortaya çıkabilecek tüm teknik ihtiyaçlar için hızlı müdahale sağlıyoruz.',
+              body: [
+                'Elektrik bağlantıları, priz uyumluluğu, kablo yönetimi, aydınlatma sistemleri, modem–router kurulumları ve TV/monitör montajları teknik kurallara uygun yapılır.',
+                'Beyaz eşya ve elektronik cihazların üretici standartlarına göre çalışıp çalışmadığı test edilir; çamaşır makinesi denge ayarı, bulaşık makinesi su giriş/çıkış kontrolü, buzdolabı konumlandırması, TV ve modem testleri gerçekleştirilir.',
+                'Kablo karmaşası, zayıf bağlantı veya kurulum hatası tespit edilirse anında düzeltilir; müşterilere kullanım eğitimi verilir, garanti ve servis önerileri paylaşılır.',
+                'Gerekirse üretici servisiyle koordinasyon kurulur ve tüm teknik işlemler rapor halinde müşteriye iletilir.'
+              ],
+              features: [
+                'Elektrik, kablo ve priz düzenlemeleri',
+                'TV, modem, router ve ağ cihazı kurulumu',
+                'Beyaz eşya test ve bağlantı ayarları',
+                'Ofis donanımı yerleşimi ve network düzeni',
+                'Hızlı teknik müdahale ve yerinde çözüm',
+                'Kullanım eğitimi ve teknik danışmanlık',
+                'Kurulum sonrası teknik raporlama'
+              ]
+            },
+            en: {
+              title: 'Technical Support Services',
+              intro:
+                'Our specialists handle any technical requirement that surfaces during moving, installation or settling in.',
+              body: [
+                'We manage electrical hookups, outlet compatibility, cable management, lighting, modem/router setup and TV or monitor installations to code.',
+                'Appliances and electronics are tested against manufacturer standards—washing machine balance, dishwasher water lines, refrigerator placement, TV signal and modem connectivity are all verified.',
+                'Cable clutter, weak connections or installation errors are fixed instantly; clients receive usage training, warranty guidance and vendor coordination when needed.',
+                'All technical steps are summarised in a post-installation report.'
+              ],
+              features: [
+                'Electrical, cabling and outlet adjustments',
+                'Technical setup for TVs, modems, routers and network gear',
+                'Appliance testing and connection tuning',
+                'Office hardware placement and network tidy-up',
+                'Rapid on-site troubleshooting',
+                'User training and technical consultation',
+                'Post-installation technical reporting'
               ]
             }
           }

@@ -1,7 +1,7 @@
 {
   "topbar": {
-    "phone": "+44 20 7930 8205",
-    "address": "450 Strand, Charing Cross, London"
+    "phone": "+90 541 596 54 91",
+    "address": "Ergenekon Mahallesi, Sanal Sokak 8/6, Yenimahalle / Ankara"
   },
   "navbar": {
     "home": "ANA SAYFA",
@@ -13,7 +13,7 @@
     "brand": {
       "primary": "LÜKS BERLİN",
       "secondary": "NAKLİYAT",
-      "tagline": "Berlin'de premium taşıma partneriniz"
+      "tagline": "Türkiye genelinde güvenilir taşıma ortağınız"
     },
     "trust": {
       "title": "BİZE GÜVENMEK İÇİN NEDENLER",
@@ -73,25 +73,25 @@
     "title": "MÜŞTERİLERİMİZ VE RAKAMLARIMIZ",
     "items": [
       {
-        "value": "9123",
-        "label": "EKİBİMİZDEKİ PERSONEL",
-        "body": "Planlamadan sahaya kadar tüm süreci yöneten uzman nakliyeciler."
+        "value": "%100",
+        "label": "müşteri memnuniyeti",
+        "body": "Taşınmanın her aşamasında müşteri memnuniyetini ön planda tutuyoruz."
       },
       {
-        "value": "70102",
+        "value": "750+",
+        "label": "tamamlanan proje",
+        "body": "Her taşıma sigortalı, belgeli ve planlanan zamanda teslim edilir."
+      },
+      {
+        "value": "100000+",
         "suffix": "km",
-        "label": "HAFTALIK KATEDİLEN KM",
+        "label": "KATEDİLEN KM",
         "body": "Şehir içi ve şehirler arası tüm rotalar anlık olarak izlenir."
       },
       {
-        "value": "1254",
-        "label": "DÜNYA ÇAPINDA MÜŞTERİ",
-        "body": "Berlin’den dünyaya açılan markalar lojistikte bizi tercih ediyor."
-      },
-      {
-        "value": "20254",
-        "label": "TAMAMLANAN PROJE",
-        "body": "Her taşıma sigortalı, belgeli ve planlanan zamanda teslim edilir."
+        "value": "500+",
+        "label": "müşteri",
+        "body": "Türkiye genelinde hizmet verdiğimiz memnun müşterilerimiz."
       }
     ]
   },
@@ -110,90 +110,58 @@
           {
             "id": "home-moving",
             "title": "Evden Eve Nakliyat",
-            "summary": "Sigortalı paketleme ekipleri, modüler asansör kurulumları ve aynı gün teslim takibi ile tüm daire taşımalarını uçtan uca yönetiyoruz.",
+            "summary": "Uzman ekiplerimiz, paketleme mühendisliği, kat izinleri ve sigortalama süreçlerini tek bir operasyon planında birleştirerek tüm eşyalarınızı güvenle taşır.",
             "href": "/services/domestic#home-moving"
           },
           {
             "id": "office-moving",
             "title": "Büro ve Ofis Taşımacılığı",
-            "summary": "Sunucu kabinetlerinden masa modüllerine kadar numaralandırma, paketleme ve yeni lokasyonda kurulum-düzenleme süreçlerini tek ekip yönetiyor.",
+            "summary": "Kurumsal firmalar için geliştirdiğimiz protokollerle elektronik cihazlar, arşiv dosyaları, sunucular ve mobilyalar özel güvenlik prosedürleriyle taşınır.",
             "href": "/services/domestic#office-moving"
-      },
-      {
+          },
+          {
+            "id": "safe-transport",
+            "title": "Kasa Taşımacılığı",
+            "summary": "Çelik para kasalarının taşınması ağırlık hesaplaması, bina dayanıklılığı ve güvenlik protokollerinin özel olarak değerlendirilmesini gerektirir.",
+            "href": "/services/domestic#safe-transport"
+          },
+          {
             "id": "survey",
             "title": "Ekspertiz Hizmetleri",
-            "summary": "Yerinde keşif, kat ve park izinleri, eşya listesi çıkarımı ve şeffaf fiyatlandırma dosyası aynı gün içinde tarafına iletilir.",
+            "summary": "Taşımadan önce ücretsiz ekspertiz ekibimiz adresinize gelerek eşyalarınızın türünü, ağırlığını, hacmini ve hassasiyet seviyesini analiz eder.",
             "href": "/services/domestic#survey"
-          },
-          {
-            "id": "packing",
-            "title": "Ambalaj ve Depolama",
-            "summary": "Özel tekstil askıları, mutfak setleri ve kısa süreli kapalı depo hizmetiyle paketlenen eşyalar zarar görmeden bekletilir.",
-            "href": "/services/domestic#packing"
-          }
-        ]
-      },
-      {
-        "id": "storage",
-        "title": "Yurt İçi Depolama Hizmetleri",
-        "image": "images/gallery/2.jpg",
-        "href": "/services/storage",
-        "services": [
-          {
-            "id": "warehouse-management",
-            "title": "Depo Yönetimi",
-            "summary": "Stok kartı açılışından sipariş çıkışına kadar barkodlu takip, raporlama ve müşteri paneli entegrasyonu kuruyoruz.",
-            "href": "/services/storage#warehouse-management"
-          },
-          {
-            "id": "rental-space",
-            "title": "Kiralık Depo Alanı",
-            "summary": "Farklı metrekarelerde, ısı ve nem kontrollü, 7/24 izlenen depoları kısa veya uzun süreli kiralayabilirsiniz.",
-            "href": "/services/storage#rental-space"
-          },
-          {
-            "id": "packing-crating",
-            "title": "Paketleme ve Sandıklama",
-            "summary": "Sanayi ekipmanları, sanat eserleri ve hassas cihazlar için ahşap sandık, vakum ve nem bariyerli paketleme çözümleri.",
-            "href": "/services/storage#packing-crating"
-          },
-          {
-            "id": "inventory",
-            "title": "Sayım & Envanter",
-            "summary": "Periyodik sayım, reconcilliation raporları ve bağımsız denetim çıktıları tek panelde hazırlanır.",
-            "href": "/services/storage#inventory"
           }
         ]
       },
       {
         "id": "logistics",
         "title": "Lojistik Destek Hizmetleri",
-        "image": "images/gallery/3.jpg",
+        "image": "images/gallery/5.jpg",
         "href": "/services/logistics",
         "services": [
           {
-            "id": "project-logistics",
-            "title": "Proje Lojistiği",
-            "summary": "Şantiye, fabrika hattı veya ağır ekipman taşımalarında güzergâh izinleri ve vinç-saha koordinasyonunu sağlıyoruz.",
-            "href": "/services/logistics#project-logistics"
+            "id": "logistics-support-core",
+            "title": "Lojistik Destek",
+            "summary": "Depolama, sevkiyat koordinasyonu, rota planlama ve operasyon destek hizmetlerini tek merkezden yönetiyoruz.",
+            "href": "/services/logistics#logistics-support-core"
           },
           {
-            "id": "event-support",
-            "title": "Fuar & Etkinlik Desteği",
-            "summary": "Fuar standları, roadshow kampanyaları ve mağaza açılışlarında teslimat, kurulum ve geri toplama planlarını biz yönetiyoruz.",
-            "href": "/services/logistics#event-support"
+            "id": "packing-service",
+            "title": "Ambalaj ve Paketleme",
+            "summary": "Eşyalarınızın güvenliği, doğru paketleme malzemeleri ve profesyonel tekniklerle başlar.",
+            "href": "/services/logistics#packing-service"
           },
           {
-            "id": "dedicated-dispatch",
-            "title": "7/24 Dispatch",
-            "summary": "Gerçek zamanlı konum görüntüleme, sürücü vardiya planı ve SLA ihlal bildirimleri tek merkezden takip edilir.",
-            "href": "/services/logistics#dispatch"
+            "id": "lift-service",
+            "title": "Asansör Hizmetleri",
+            "summary": "Modüler dış cephe asansörümüzle yüksek katlı binalarda hızlı, güvenli ve hasarsız taşıma sağlarız.",
+            "href": "/services/logistics#lift-service"
           },
           {
-            "id": "field-supervision",
-            "title": "Saha Süpervizyonu",
-            "summary": "Çok dilli saha ekipleri, yükleme boşaltma gözetimi, fotoğraflı rapor ve müşteri onay süreçlerini yönetir.",
-            "href": "/services/logistics#field-supervision"
+            "id": "project-transport",
+            "title": "Proje Taşımacılığı",
+            "summary": "Ağır yük, fabrika ekipmanı, makine, inşaat malzemesi ve özel boyutlu yükler için mühendislik analizine dayalı proje taşımacılığı sunuyoruz.",
+            "href": "/services/logistics#project-transport"
           }
         ]
       }
@@ -232,22 +200,22 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "HAKKIMIZDA",
-      "title": "Berlin’den Dünyaya Uzanan Taşıma Deneyimi",
-      "subtitle": "Onlarca yıllık nakliye tecrübesi, modern araç filomuz ve çok dilli operasyon ekibimizle tüm süreçleri sizin adınıza yönetiyoruz.",
+      "title": "İstanbul'dan Türkiye'ye Uzanan Güvenilir Taşıma Deneyimi",
+      "subtitle": "1994'ten bu yana yılların verdiği deneyim ve tecrübe ile kaliteli hizmet sunuyoruz. Modern araç filomuz ve tecrübeli ekibimizle taşınmanın her aşamasında yanınızdayız.",
       "background": "images/background_logistic_truck.jpg"
     },
     "who": {
       "eyebrow": "BİZ KİMİZ?",
       "title": "Kurumsal Hikâyemiz",
-      "body": "Lüks Berlin Nakliyat, şehir içi ve şehirler arası taşımacılıkta uçtan uca çözümler sunan bağımsız bir lojistik ekip. Depolama, ofis taşıma, proje lojistiği ve özel paketleme hizmetlerimizle hem bireylerin hem de markaların yanında yer alıyoruz. Felsefemiz, planlama aşamasından teslimata kadar her detayı şeffaf ve ulaşılabilir kılmak."
+      "body": "1994 yılında İstanbul merkezli olarak kurulan Lüks Berlin Evden Eve Nakliyat firması, siz saygıdeğer müşterilerimize yılların verdiği deneyim ve tecrübe ile kaliteli bir hizmet verebilmek için kurulmuştur. Lüks Berlin firmamız bünyesinde bulunan modern araç filosu ve tecrübeli yönetici kadrosuna sahip sahada işinin ehli tecrübeli personel ekipleri ile şehir içi, şehirler arası ev, ofis, işyeri ve özel değerli parça eşyalar taşımanın yanı sıra, bunları güvenle muhafaza etme konusunda son sistem güvenlikli eşya depolama hizmeti de vermektedir. Günümüz şartlarında pek çok insan gerek yaşam şartları gerekse iş gereği sık sık şehir içi şehir dışı taşınmaktadır ki bu süreçte insanlarımız iş yoğunluğu ve stres nedeniyle bu sıkıntılı nakil sürecinde işinde uzmanlaşmış profesyonel nakliyat firmaları büyük kolaylık sağlamaktadır. Firma olarak müşterilerimizi taşınmanın her aşamasında memnun eden başarı odaklı çalışmayı prensip haline getirmiş işine saygı duyan büyük bir özen ve titizlikle çalışan personelimiz ekonomik bir hizmet sunarken asla kaliteden ödün vermez."
     },
     "vision": {
       "title": "Vizyonumuz",
-      "body": "Berlin’de başladığımız kaliteli hizmet standardını Avrupa’nın her noktasına taşımak; müşterilerimize güvenilir, hızlı ve teknolojiyle desteklenen taşıma deneyimi sunmak."
+      "body": "Lüks Berlin Nakliyat Firması kuruluşundan bu güne kadar geçmiş yılların kazandırdığı tecrübe ve birikim ile taşımacılık konusunda günümüze kadar modern çağın getirdiği teknolojik yenilikleri de takip ederek kusursuz bir hizmet sunmayı hedeflemektedir."
     },
     "mission": {
       "title": "Misyonumuz",
-      "body": "Her taşınmayı kendi hikâyemiz gibi sahiplenmek, beklentileri aşacak çözümler üretmek ve alanında uzman ekibimizle her zaman ulaşılabilir olmak."
+      "body": "Müşterilerimizi taşınmanın her aşamasında memnun eden başarı odaklı çalışmayı prensip haline getirmiş, işine saygı duyan, büyük bir özen ve titizlikle çalışan personelimiz ile ekonomik bir hizmet sunarken asla kaliteden ödün vermemek."
     },
     "social": {
       "eyebrow": "SOSYAL MEDYA",
@@ -304,15 +272,14 @@
     "infoItems": {
       "address": { "label": "Adres" },
       "phone": { "label": "Telefon" },
-      "mail": { "label": "E-posta" },
-      "hours": { "label": "Çalışma Saatleri", "value": "7/24 hizmet veriyoruz" }
+      "hours": { "label": "Çalışma Saatleri", "value": "7/24 hizmet veriyoruz" },
+      "coverage": { "label": "Hizmet Alanı", "value": "Türkiye genelinde hizmet veriyoruz" }
     },
     "formEyebrow": "TEKLİF AL",
     "formTitle": "BİZE ULAŞIN",
     "formLead": "Formu doldurun; gönder butonuna bastığınızda WhatsApp üzerinden bize mesaj iletebilirsiniz.",
     "placeholders": {
       "name": "Ad Soyad",
-      "email": "E-posta",
       "message": "Mesajınız"
     },
     "formButton": "WHATSAPP İLE TEKLİF AL",
@@ -323,7 +290,6 @@
     "whatsapp": {
       "greeting": "Merhaba,",
       "name": "ben {{name}}.",
-      "email": "E-posta: {{email}}.",
       "message": "Mesajım: {{message}}."
     }
   },
@@ -332,26 +298,70 @@
     "title": "Müşterilerimiz ne söylüyor?",
     "testimonials": [
       {
-        "text": "Eşyalarımızı özenle paketlediler, tam saatinde geldiler. İletişimleri güçlüydü ve süreci çok iyi yönettiller.",
-        "name": "Ahmet T.",
-        "role": "Berlin — Ev Taşıma"
+        "text": "Asansörlü taşıma hizmetimizi zamanında ve sorunsuz hallettiler. Tavsiye ederim.",
+        "name": "Metin A.",
+        "role": "Asansörlü Nakliyat",
+        "rating": 5
       },
       {
-        "text": "Ofis taşımamız planlandığı gibi, hızlı bitti. Ekip çözüm odaklıydı; gönül rahatlığıyla öneririm.",
-        "name": "Merve K.",
-        "role": "Berlin — Ofis Taşıma"
+        "text": "Batıkent’ten Elmadağ’a taşındık. Paketleme, asansör kurulumu, demontaj ve teslimat kusursuzdu; beklediğimizden hızlı bitti.",
+        "name": "İbrahim E.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "",
+        "name": "Ferhat B.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Eksper sürecinden taşıma gününe kadar tüm ekip çok profesyoneldi. Evimi sorunsuz taşıdılar.",
+        "name": "Özgür Ş.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Mutfaktan kıyafetlere kadar her şeyi hızlıca topladılar. Tertemiz ve özenli çalıştılar.",
+        "name": "Nurgül Kayhan K.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Montaj, paketleme, planlama… Hepsini bilen ekiple karşılaştım. Hiçbir şeye karışmadan taşındım.",
+        "name": "Nurullah Can C.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Sorunsuz, hızlı ve güler yüzlü hizmet aldım. Teşekkür ederim.",
+        "name": "Özkan Y.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Tüm eşyalarımız paketlenip demonte edildi, yeni evde eksiksiz kuruldu. Hiçbir ürün zarar görmedi.",
+        "name": "Onur B.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
+      },
+      {
+        "text": "Armut üzerinden tanıştık. Eşyalar özenle paketlendi, işi bilen ustalarla çalıştım. Kesinlikle tavsiye ederim.",
+        "name": "Cemali B.",
+        "role": "Evden Eve Nakliyat",
+        "rating": 5
       }
     ],
     "cta": {
+      "eyebrow": "İLETİŞİME GEÇİN",
       "title": "Geri dönüş talep edin",
-      "subtitle": "En hızlı dönüş için hemen arayın ya da WhatsApp’tan yazın. İsterseniz e-posta da atabilirsiniz.",
+      "subtitle": "En hızlı dönüş için bizi hemen arayın ya da WhatsApp’tan yazın.",
       "call": "Hemen Ara",
-      "whatsapp": "WhatsApp’tan Yaz",
-      "mail": "E-posta"
+      "whatsapp": "WhatsApp’tan Yaz"
     },
     "chips": {
-      "hours": "09:00 – 21:00",
-      "coverage": "Berlin & çevresi"
+      "hours": "7/24 hizmet veriyoruz",
+      "coverage": "Tüm Türkiye"
     }
   },
   "footer": {
@@ -360,25 +370,42 @@
       "accent": "BERLİN",
       "suffix": "NAKLİYAT"
     },
-    "description": "Şehir içi ve şehirler arası taşımacılıkta güvenilir, zamanında ve sigortalı hizmet. Ofis, ev ve parsiyel taşımalar için profesyonel çözümler.",
+    "description": "Ankara merkezli ekibimizle Türkiye genelinde güvenilir, zamanında ve sigortalı taşımacılık çözümleri sunuyoruz.",
     "quickLinksTitle": "Hızlı Bağlantılar",
     "servicesTitle": "Hizmetler",
     "contactsTitle": "İletişim",
     "services": {
-      "intercity": "Şehirler Arası Taşımacılık",
-      "office": "Ofis & Ev Taşıma",
-      "elevator": "Asansörlü Taşıma",
-      "logistics": "Lojistik Çözümler"
+      "homeMoving": "Evden Eve Nakliyat",
+      "officeMoving": "Büro & Ofis Taşıma",
+      "safeTransport": "Kasa Taşımacılığı",
+      "packingService": "Ambalaj ve Paketleme",
+      "liftService": "Asansör Hizmetleri",
+      "logisticsSupport": "Lojistik Destek"
     },
     "contacts": {
-      "address": "Karl-Marx-Allee 90, 10243 Berlin, DE",
-      "phone": "+49 30 000 00 00",
-      "email": "info@luksberlinnakliyat.com"
+      "address": "Ergenekon Mahallesi, Sanal Sokak 8/6, Yenimahalle / Ankara",
+      "phone": "+90 541 596 54 91"
     },
     "bottom": {
       "copyright": "© 2025 Lüks Berlin Nakliyat. Tüm hakları saklıdır.",
       "privacy": "Gizlilik",
       "terms": "Kullanım Şartları"
+    },
+    "legal": {
+      "privacy": {
+        "title": "Gizlilik Politikası",
+        "body": [
+          "Paylaştığınız iletişim bilgilerini yalnızca teklif hazırlamak ve operasyon sürecini paylaşmak için kullanıyoruz.",
+          "Verileriniz üçüncü taraflara satılmaz; yalnızca yasal zorunluluklar veya talep ettiğiniz hizmetin gereklilikleri doğrultusunda paylaşılır."
+        ]
+      },
+      "terms": {
+        "title": "Kullanım Şartları",
+        "body": [
+          "Web sitemizde sunulan içerikler bilgilendirme amaçlıdır; fiyatlandırma ve planlama talepleriniz proje detaylarına göre netleştirilir.",
+          "Sayfalarımızı kullanarak çerez politikasını kabul etmiş olursunuz ve iletişim formu üzerinden ilettiğiniz bilgilerin doğru olduğunu onaylarsınız."
+        ]
+      }
     }
   }
 }

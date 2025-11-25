@@ -117,12 +117,6 @@
   margin-bottom: 14px;
 }
 
-@media (min-width: 600px) {
-  .contact-form-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;

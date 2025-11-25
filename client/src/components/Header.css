@@ -17,12 +17,13 @@
   left: 0;
   top: calc(-1 * var(--topbar-height, 50px));
   z-index: 10;
-  min-width: var(--logo-section-width, 650px);
-  width: var(--logo-section-width, 650px);
+  width: min(var(--logo-section-width, 650px), 100%);
   display: flex;
   align-items: center;
+  gap: clamp(12px, 1.2vw, 20px);
+  justify-content: flex-start;
   height: calc(100% + var(--topbar-height, 50px));
-  padding: 20px 40px;
+  padding: clamp(14px, 1.9vw, 26px) clamp(20px, 2.6vw, 42px);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -41,47 +42,47 @@
 
 .logo-text {
   margin: 0;
-  color: #1a2b48;
-  font-size: 28px;
-  font-weight: 800;
+  color: #101b34;
+  font-size: clamp(26px, 2.3vw, 36px);
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Arial', 'Helvetica', sans-serif;
+  letter-spacing: 0.18em;
+  font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
   position: relative;
   z-index: 1;
-  left: 100px;
-  max-width: calc(100% - 120px);
-  line-height: 1.1;
+  max-width: 100%;
+  line-height: 1.05;
   word-break: break-word;
+  text-shadow: 0 12px 28px rgba(12, 19, 58, 0.25);
 }
 
 .logo-part1 {
-  font-weight: 600;
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.24em;
 }
 
 .logo-part2 {
-  font-weight: 800;
-  color: white;
+  display: block;
+  font-weight: 900;
+  color: #101b34;
+  letter-spacing: 0.28em;
+}
+
+.logo-inline {
+  width: clamp(80px, 9vw, 180px);
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transform: scale(2.25);
+  margin-top: clamp(24px, 0.8vw, 10px);
 }
 
 @media (max-width: 992px) {
-  .logo-section {
-    min-width: 450px;
-    width: 450px;
-    padding: 18px 30px;
-    top: calc(-1 * var(--topbar-height, 50px));
-    height: calc(100% + var(--topbar-height, 50px));
-  }
-
   .logo-section::after {
     width: 700px;
     left: -400px;
-  }
-
-  .logo-text {
-    font-size: 24px;
-    left: 80px;
-    max-width: calc(100% - 90px);
   }
 }
 
@@ -91,24 +92,8 @@
     min-height: auto;
   }
 
-  .logo-section {
-    position: relative;
-    width: 100%;
-    padding: 15px 20px;
-    text-align: center;
-    min-width: auto;
-    top: 0;
-    height: auto;
-  }
-
-  .logo-section::after {
-    display: none;
-  }
-
   .logo-text {
-    font-size: 22px;
-    left: 0;
-    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -126,26 +111,12 @@
     min-height: auto;
     padding: 12px 20px;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .logo-section {
     display: none;
-  }
-}
-
-@media (max-width: 1325px) {
-  .logo-text {
-    font-size: 26px;
-    left: 70px;
-    max-width: calc(100% - 80px);
-  }
-}
-
-@media (max-width: 1260px) {
-  .logo-text {
-    font-size: 24px;
-    left: 48px;
-    max-width: calc(100% - 60px);
   }
 }
 

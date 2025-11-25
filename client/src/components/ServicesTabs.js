@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import hizmetlerimizGorsel from '../assets/img/hizmetlerimizGorsel.png';
 import './servicestabs.css';
 
 const MAX_VISIBLE_SERVICES = 4;
@@ -66,7 +67,6 @@ const ServicesTabs = () => {
   const activeCategoryData = categories[activeCategory] || {};
   const services = activeCategoryData.services || [];
   const currentService = services[activeService] || services[0] || {};
-  const imageSrc = resolveImage(activeCategoryData.image);
 
   const handleCategoryToggle = (index) => {
     if (index === activeCategory) return;
@@ -102,15 +102,15 @@ const ServicesTabs = () => {
                     aria-hidden={!isOpen}
                   >
                     {visibleServices(category).map((service, serviceIdx) => (
-                      <button
-                        type="button"
+              <button
+                type="button"
                         key={service.id || service.title}
                         className={`services-drawer-item ${activeService === serviceIdx && isOpen ? 'active' : ''}`}
                         onClick={() => setActiveService(serviceIdx)}
-                      >
+              >
                         <span>{service.title}</span>
-                      </button>
-                    ))}
+              </button>
+            ))}
                     <Link
                       to={category.href || '/services'}
                       className="services-drawer-viewall"
@@ -127,7 +127,7 @@ const ServicesTabs = () => {
         <div className="services-tabs-right">
           <div className="services-card">
             <div className="services-card-media">
-              <img src={imageSrc} alt={activeCategoryData.title} />
+              <img src={hizmetlerimizGorsel} alt={activeCategoryData.title} />
             </div>
             <div className="services-card-body">
               <p className="services-card-eyebrow">{activeCategoryData.title}</p>
@@ -141,7 +141,7 @@ const ServicesTabs = () => {
               >
                 <span>{readMoreLabel}</span>
               </Link>
-            </div>
+          </div>
           </div>
         </div>
       </div>

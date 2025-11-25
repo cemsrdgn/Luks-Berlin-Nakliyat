@@ -45,11 +45,6 @@ const Gallery = ({
       <Link to={item.href || viewAllHref} className="gallery-card-link">
         <img src={item.image} alt={item.title} className="gallery-card-image" />
         <div className="gallery-card-overlay" />
-        {item.tag && (
-          <div className="gallery-card-tag">
-            <span>{item.tag}</span>
-          </div>
-        )}
         <div className="gallery-card-title">
           <h3>{item.title}</h3>
         </div>
@@ -115,7 +110,6 @@ Gallery.propTypes = {
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
       image: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      tag: PropTypes.string,
       href: PropTypes.string,
       caption: PropTypes.string
     })

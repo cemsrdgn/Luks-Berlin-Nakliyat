@@ -1,7 +1,7 @@
 {
   "topbar": {
-    "phone": "+44 20 7930 8205",
-    "address": "450 Strand, Charing Cross, London"
+    "phone": "+90 541 596 54 91",
+    "address": "Ergenekon Mahallesi, Sanal Sokak 8/6, Yenimahalle / Ankara"
   },
   "navbar": {
     "home": "HOME",
@@ -13,7 +13,7 @@
     "brand": {
       "primary": "LÜKS BERLIN",
       "secondary": "NAKLIYAT",
-      "tagline": "Premium moving partner"
+      "tagline": "Your reliable moving partner across Turkey"
     },
     "trust": {
       "title": "REASONS TO TRUST US",
@@ -73,25 +73,25 @@
     "title": "OUR CLIENTS & COUNTERS",
     "items": [
       {
-        "value": "9123",
-        "label": "EMPLOYEES IN TEAM",
-        "body": "Skilled movers, planers and coordinators supporting you end-to-end."
+        "value": "%100",
+        "label": "customer satisfaction",
+        "body": "We prioritize customer satisfaction at every stage of the move."
       },
       {
-        "value": "70102",
+        "value": "750+",
+        "label": "projects completed",
+        "body": "Every relocation documented, insured and delivered on schedule."
+      },
+      {
+        "value": "100000+",
         "suffix": "km",
-        "label": "KILOMETER TRAVEL WEEKLY",
+        "label": "KILOMETERS TRAVELED",
         "body": "Long-haul and city routes operated with real-time tracking."
       },
       {
-        "value": "1254",
-        "label": "WORLDWIDE CLIENTS",
-        "body": "From Berlin to the globe, brands rely on our logistics network."
-      },
-      {
-        "value": "20254",
-        "label": "PROJECTS DONE",
-        "body": "Every relocation documented, insured and delivered on schedule."
+        "value": "500+",
+        "label": "customers",
+        "body": "Satisfied customers we serve across Turkey."
       }
     ]
   },
@@ -110,90 +110,58 @@
           {
             "id": "home-moving",
             "title": "House-to-House Moving",
-            "summary": "We orchestrate every household move with insured packing crews, modular lifts and same-day arrival tracking.",
+            "summary": "Our expert crews merge packing engineering, floor permits and insurance workflows into a single project plan to move every belonging safely.",
             "href": "/services/domestic#home-moving"
           },
           {
             "id": "office-moving",
             "title": "Office & Workplace Relocation",
-            "summary": "Cable labeling, server rack handling and after-hours workstation installation delivered by a single coordination team.",
+            "summary": "Purpose-built protocols move all electronics, archives, servers and furniture under strict security procedures for corporate clients.",
             "href": "/services/domestic#office-moving"
-      },
-      {
+          },
+          {
+            "id": "safe-transport",
+            "title": "Safe Relocation",
+            "summary": "Transporting steel safes demands dedicated analysis of weight, building endurance and security protocols.",
+            "href": "/services/domestic#safe-transport"
+          },
+          {
             "id": "survey",
             "title": "Pre-Move Survey",
-            "summary": "On-site parking and lift checks, inventory capture, and transparent budgeting prepared within the same day.",
+            "summary": "Our free survey crew documents the type, weight, volume and fragility of every item before moving day.",
             "href": "/services/domestic#survey"
-          },
-          {
-            "id": "packing",
-            "title": "Packing & Short-Term Storage",
-            "summary": "Wardrobe boxes, dish packs and secure climate-friendly storage keep belongings pristine between addresses.",
-            "href": "/services/domestic#packing"
-          }
-        ]
-      },
-      {
-        "id": "storage",
-        "title": "Domestic Storage Solutions",
-        "image": "images/gallery/2.jpg",
-        "href": "/services/storage",
-        "services": [
-          {
-            "id": "warehouse-management",
-            "title": "Warehouse Management",
-            "summary": "Barcode-driven inventory control, cycle counts and customer-facing dashboards for complete visibility.",
-            "href": "/services/storage#warehouse-management"
-          },
-          {
-            "id": "rental-space",
-            "title": "Rental Storage Space",
-            "summary": "Flexible, temperature-regulated units with CCTV, access logging and custom insurance options.",
-            "href": "/services/storage#rental-space"
-          },
-          {
-            "id": "packing-crating",
-            "title": "Packing & Crating",
-            "summary": "Custom crating, vacuum packing and export compliance for high-value or delicate equipment.",
-            "href": "/services/storage#packing-crating"
-          },
-          {
-            "id": "inventory",
-            "title": "Inventory & Counting",
-            "summary": "Periodic reconciliation, audit preparation and exceptions reporting directly from our WMS.",
-            "href": "/services/storage#inventory"
           }
         ]
       },
       {
         "id": "logistics",
         "title": "Logistics Support Services",
-        "image": "images/gallery/3.jpg",
+        "image": "images/gallery/5.jpg",
         "href": "/services/logistics",
         "services": [
           {
-            "id": "project-logistics",
-            "title": "Project Logistics",
-            "summary": "Turn-key coordination covering heavy lifts, plant shutdowns, route permits and on-site safety management.",
-            "href": "/services/logistics#project-logistics"
+            "id": "logistics-support-core",
+            "title": "Core Logistics Support",
+            "summary": "Centralised storage, dispatch coordination, routing and operations support for every shipment.",
+            "href": "/services/logistics#logistics-support-core"
           },
           {
-            "id": "event-support",
-            "title": "Fair & Event Support",
-            "summary": "Multi-stop deliveries, stand build teams and reverse logistics for roadshows, fairs and pop-up campaigns.",
-            "href": "/services/logistics#event-support"
+            "id": "packing-service",
+            "title": "Professional Packing",
+            "summary": "Safety starts with the right materials and methods tailored to each category of belongings.",
+            "href": "/services/logistics#packing-service"
           },
           {
-            "id": "dedicated-dispatch",
-            "title": "Dedicated Dispatch",
-            "summary": "24/7 control tower with live GPS feeds, driver scheduling and instant SLA notifications.",
-            "href": "/services/logistics#dispatch"
+            "id": "lift-service",
+            "title": "External Lift Service",
+            "summary": "Our modular facade lift keeps high-rise moves fast, safe and independent of narrow stairwells or elevators.",
+            "href": "/services/logistics#lift-service"
           },
           {
-            "id": "field-supervision",
-            "title": "Field Supervision",
-            "summary": "Multilingual supervisors handle loading oversight, photographic reports and customer sign-offs on site.",
-            "href": "/services/logistics#field-supervision"
+            "id": "project-transport",
+            "title": "Project Transport",
+            "summary": "We handle heavy loads, factory equipment, machinery and oversized cargo through engineering-led project transport.",
+            "href": "/services/logistics#project-transport"
           }
         ]
       }
@@ -232,22 +200,22 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "ABOUT US",
-      "title": "Moving Experience From Berlin To The World",
-      "subtitle": "Decades of relocation know-how, a modern fleet and multilingual coordinators let us manage every step for you.",
+      "title": "Trusted Moving Experience From Istanbul Across Turkey",
+      "subtitle": "Since 1994, we've been delivering quality service with years of experience and expertise. Our modern fleet and experienced team stand by your side at every stage of your move.",
       "background": "images/background_logistic_truck.jpg"
     },
     "who": {
       "eyebrow": "WHO WE ARE",
       "title": "Our Company Story",
-      "body": "Lüks Berlin Nakliyat is an independent logistics squad delivering end-to-end solutions for city and intercity moves. From storage to project logistics and bespoke packing we stand next to individuals and brands alike, keeping every detail transparent from planning to delivery."
+      "body": "Lüks Berlin Evden Eve Nakliyat was founded in Istanbul in 1994 to deliver quality service to our valued customers with years of experience and expertise. With our modern vehicle fleet and experienced management team alongside our skilled field personnel, Lüks Berlin offers city-wide and intercity moving services for homes, offices, workplaces and special valuable items, as well as state-of-the-art secure storage services to safely preserve your belongings. In today's conditions, many people move frequently within or between cities due to living conditions or work requirements. During this process, our professional moving companies provide great convenience to people who face challenges due to work intensity and stress during this difficult relocation process. As a company, we have made it our principle to work with a success-oriented approach that satisfies our customers at every stage of moving. Our respectful, careful and meticulous staff never compromises on quality while offering economical service. Since its establishment, Lüks Berlin Nakliyat Company has been following the technological innovations brought by the modern era in the field of transportation, aiming to provide flawless service with the experience and knowledge gained over the years."
     },
     "vision": {
       "title": "Our Vision",
-      "body": "Carry the quality standard we started in Berlin to every corner of Europe while offering trustworthy, fast and technology-backed moving experiences."
+      "body": "Since its establishment, Lüks Berlin Nakliyat Company aims to provide flawless service by following the technological innovations brought by the modern era in transportation, with the experience and knowledge gained over the years."
     },
     "mission": {
       "title": "Our Mission",
-      "body": "Treat every relocation as our own story, exceed expectations with tailored solutions and stay reachable with expert teams at all times."
+      "body": "To work with a success-oriented approach that satisfies our customers at every stage of moving, with our respectful, careful and meticulous staff, never compromising on quality while offering economical service."
     },
     "social": {
       "eyebrow": "SOCIAL MEDIA",
@@ -304,15 +272,14 @@
     "infoItems": {
       "address": { "label": "Address" },
       "phone": { "label": "Phone" },
-      "mail": { "label": "Email" },
-      "hours": { "label": "Working Hours", "value": "We operate 24/7" }
+      "hours": { "label": "Working Hours", "value": "We operate 24/7" },
+      "coverage": { "label": "Service Area", "value": "We serve all across Turkey" }
     },
     "formEyebrow": "GET A QUOTE",
     "formTitle": "GET IN TOUCH",
     "formLead": "Fill the form and, when you hit send, we will receive your message on WhatsApp instantly.",
     "placeholders": {
       "name": "Full Name",
-      "email": "Email",
       "message": "Your message"
     },
     "formButton": "REQUEST VIA WHATSAPP",
@@ -323,7 +290,6 @@
     "whatsapp": {
       "greeting": "Hello,",
       "name": "I'm {{name}}.",
-      "email": "Email: {{email}}.",
       "message": "My message: {{message}}."
     }
   },
@@ -332,26 +298,70 @@
     "title": "What our clients say",
     "testimonials": [
       {
-        "text": "They wrapped every piece carefully and arrived exactly on time. Communication was excellent and the whole process felt effortless.",
-        "name": "Ahmet T.",
-        "role": "Berlin — Home Move"
+        "text": "They handled our lift-assisted move right on time and without any hassle. Definitely recommended.",
+        "name": "Metin A.",
+        "role": "Lift-Assisted Moving",
+        "rating": 5
       },
       {
-        "text": "Our office relocation finished faster than planned. The crew stayed solution oriented the entire time; we highly recommend them.",
-        "name": "Merve K.",
-        "role": "Berlin — Office Move"
+        "text": "We moved from Batıkent to Elmadağ. Packing, lift setup, dismantling and delivery were flawless and faster than we expected.",
+        "name": "İbrahim E.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "",
+        "name": "Ferhat B.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "From the initial survey to move day the whole team stayed professional and moved my home without stress.",
+        "name": "Özgür Ş.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "They boxed everything from the kitchen to the wardrobes in no time. Super clean and careful crew.",
+        "name": "Nurgül Kayhan K.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "Great crew. Packing, assembly, planning—done by people who know their job, so I didn’t need to interfere.",
+        "name": "Nurullah Can C.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "Smooth, tidy service from start to finish. Thank you.",
+        "name": "Özkan Y.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "Onur Bey and the crew packed, dismantled and reinstalled everything with zero damage. Couldn’t ask for better.",
+        "name": "Onur B.",
+        "role": "House-to-House Moving",
+        "rating": 5
+      },
+      {
+        "text": "Met them via Armut. Every item was wrapped with care; real professionals I would recommend to anyone.",
+        "name": "Cemali B.",
+        "role": "House-to-House Moving",
+        "rating": 5
       }
     ],
     "cta": {
+      "eyebrow": "GET IN TOUCH",
       "title": "Request a call back",
-      "subtitle": "For the fastest response call us, drop a WhatsApp message or send an email whenever you prefer.",
+      "subtitle": "Call us or drop a WhatsApp message for the fastest response.",
       "call": "Call Now",
-      "whatsapp": "Message on WhatsApp",
-      "mail": "Send Email"
+      "whatsapp": "Message on WhatsApp"
     },
     "chips": {
-      "hours": "09:00 – 21:00",
-      "coverage": "Berlin & surrounding area"
+      "hours": "Available 24/7",
+      "coverage": "Serving all of Turkey"
     }
   },
   "footer": {
@@ -360,25 +370,42 @@
       "accent": "BERLİN",
       "suffix": "NAKLİYAT"
     },
-    "description": "Reliable, on-time and insured moving support for Berlin and all of Germany. Professional solutions for homes, offices and partial loads.",
+    "description": "Ankara-based crews delivering reliable, on-time and insured moving support across Turkey for homes, offices and partial loads.",
     "quickLinksTitle": "Quick Links",
     "servicesTitle": "Services",
     "contactsTitle": "Contacts",
     "services": {
-      "intercity": "Intercity Moving",
-      "office": "Office & Home Moving",
-      "elevator": "Lift-Assisted Moving",
-      "logistics": "Logistics Solutions"
+      "homeMoving": "House-to-House Moving",
+      "officeMoving": "Office Relocation",
+      "safeTransport": "Safe Relocation",
+      "packingService": "Professional Packing",
+      "liftService": "External Lift Service",
+      "logisticsSupport": "Logistics Support"
     },
     "contacts": {
-      "address": "Karl-Marx-Allee 90, 10243 Berlin, DE",
-      "phone": "+49 30 000 00 00",
-      "email": "info@luksberlinnakliyat.com"
+      "address": "Ergenekon Mahallesi, Sanal Sokak 8/6, Yenimahalle / Ankara",
+      "phone": "+90 541 596 54 91"
     },
     "bottom": {
       "copyright": "© 2025 Lüks Berlin Nakliyat. All rights reserved.",
       "privacy": "Privacy",
       "terms": "Terms of Use"
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Notice",
+        "body": [
+          "We only use the contact details you share to prepare quotes and keep you informed about your relocation.",
+          "Your data is never sold to third parties; it is shared only when required by law or to deliver the service you request."
+        ]
+      },
+      "terms": {
+        "title": "Terms of Use",
+        "body": [
+          "All information on this site is for guidance; final pricing and planning are confirmed once we review your project details.",
+          "By using our pages you accept our cookie policy and confirm that the information you submit through the contact form is accurate."
+        ]
+      }
     }
   }
 }

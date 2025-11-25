@@ -7,25 +7,30 @@ import StatsCounters from '../components/StatsCounters';
 import Gallery from '../components/Gallery';
 import ContactTestimonialsSection from '../sections/ContactTestimonialsSection';
 import galleryItemsBase from '../data/galleryItems';
+import { servicesContent } from '../data/servicesData';
 
 const HomePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language?.startsWith('en') ? 'en' : 'tr';
   const galleryCopy = t('homeGallery', { returnObjects: true }) || {};
 
   const galleryItems = useMemo(() => {
-    const copyItems = galleryCopy.items || [];
-    if (copyItems.length) {
-      return copyItems.slice(0, galleryItemsBase.length).map((copyItem, index) => ({
-        ...galleryItemsBase[index],
-        title: copyItem.title,
-        tag: copyItem.tag
-      }));
-    }
-    return galleryItemsBase.map((item, index) => ({
-      ...item,
-      title: `Gallery Item ${index + 1}`
-    }));
-  }, [galleryCopy.items]);
+    // Get domestic services titles
+    const domesticCategory = servicesContent.categories.find((cat) => cat.slug === 'domestic');
+    const domesticServices = domesticCategory?.services || [];
+    const serviceTitles = domesticServices.map((service) => service.copy[lang]?.title || '');
+
+    // Map gallery items to service titles
+    // Use service titles for first items, repeat if needed for 8 items
+    return galleryItemsBase.map((item, index) => {
+      const serviceIndex = index % serviceTitles.length;
+      const title = serviceTitles[serviceIndex] || `Gallery Item ${index + 1}`;
+      return {
+        ...item,
+        title
+      };
+    });
+  }, [lang, galleryItemsBase.length]);
 
   return (
     <>
@@ -35,9 +40,8 @@ const HomePage = () => {
       <StatsCounters />
       <ContactTestimonialsSection
         backgroundUrl={`${process.env.PUBLIC_URL}/images/background_logistic_truck.jpg`}
-        phoneE164="+49 30 000000"
-        whatsappE164="+49 30 000000"
-        email=""
+        phoneE164="+90 541 596 54 91"
+        whatsappE164="+90 541 596 54 91"
       />
       <Gallery
         items={galleryItems}

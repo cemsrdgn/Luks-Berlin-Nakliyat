@@ -88,6 +88,13 @@
   line-height: 1.9;
 }
 
+.cts-rating {
+  margin-top: 12px;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #ffd84d;
+}
+
 /* yazar satırı */
 .cts-author-row {
   margin-top: 18px;
@@ -178,8 +185,6 @@
 .cts-btn > span { transform: skewX(12deg); display: inline-block; }
 .cts-btn-call { background: #ff5a1f; }      /* turuncu */
 .cts-btn-wa   { background: #128C7E; }      /* koyu WhatsApp yeşili (neon değil) */
-.cts-btn-mail { background: rgba(255,255,255,.16); }
-
 .cts-small {
   margin-top: 6px;
   color: rgba(255,255,255,.80);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import instagramLogo from '../assets/logo/instagram.png';
@@ -13,15 +13,25 @@ const quickLinkAnchors = [
 ];
 
 const serviceAnchors = [
-  { key: 'intercity', href: '/services#intercity' },
-  { key: 'office', href: '/services#office' },
-  { key: 'elevator', href: '/services#elevator' },
-  { key: 'logistics', href: '/services#logistics' }
+  { key: 'homeMoving', href: '/services/domestic#home-moving' },
+  { key: 'officeMoving', href: '/services/domestic#office-moving' },
+  { key: 'safeTransport', href: '/services/domestic#safe-transport' },
+  { key: 'packingService', href: '/services/logistics#packing-service' },
+  { key: 'liftService', href: '/services/logistics#lift-service' },
+  { key: 'logisticsSupport', href: '/services/logistics#logistics-support-core' }
 ];
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [legalModal, setLegalModal] = useState(null);
   const brand = t('footer.brand', { returnObjects: true });
+  const legalCopy = t('footer.legal', { returnObjects: true }) || {};
+
+  const handleScrollTop = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const quickLinks = quickLinkAnchors.map((item) => ({
     ...item,
@@ -35,12 +45,10 @@ const Footer = () => {
 
   const address = t('footer.contacts.address');
   const phone = t('footer.contacts.phone');
-  const email = t('footer.contacts.email');
 
   const contactItems = [
     { key: 'address', icon: '📍', content: address },
-    { key: 'phone', icon: '📞', content: phone, href: `tel:${phone.replace(/[^0-9+]/g, '')}` },
-    { key: 'email', icon: '✉️', content: email, href: `mailto:${email}` }
+    { key: 'phone', icon: '📞', content: phone, href: `tel:${phone.replace(/[^0-9+]/g, '')}` }
   ];
 
   return (
@@ -56,18 +64,7 @@ const Footer = () => {
             <p className="footer-description">{t('footer.description')}</p>
             <div className="footer-social">
               <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="social-link"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
-                </svg>
-              </a>
-              <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/luksberlinevofistransferi?igsh=M3VjODJ6cnQ4M2o0&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -83,7 +80,9 @@ const Footer = () => {
             <ul className="footer-list">
               {quickLinks.map((item) => (
                 <li key={item.key}>
-                  <Link to={item.href}>{item.label}</Link>
+                  <Link to={item.href} onClick={handleScrollTop}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -120,12 +119,44 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>{t('footer.bottom.copyright')}</p>
           <nav className="footer-bottom-nav">
-            <a href="#privacy">{t('footer.bottom.privacy')}</a>
+            <button type="button" onClick={() => setLegalModal('privacy')}>
+              {t('footer.bottom.privacy')}
+            </button>
             <span className="divider">|</span>
-            <a href="#terms">{t('footer.bottom.terms')}</a>
+            <button type="button" onClick={() => setLegalModal('terms')}>
+              {t('footer.bottom.terms')}
+            </button>
           </nav>
         </div>
       </div>
+
+      {legalModal ? (
+        <div
+          className="footer-modal"
+          role="dialog"
+          aria-modal="true"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setLegalModal(null);
+            }
+          }}
+        >
+          <div className="footer-modal-content">
+            <button
+              type="button"
+              className="footer-modal-close"
+              onClick={() => setLegalModal(null)}
+              aria-label="Close legal modal"
+            >
+              ×
+            </button>
+            <h3>{legalCopy[legalModal]?.title}</h3>
+            {(legalCopy[legalModal]?.body || []).map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </footer>
   );
 };

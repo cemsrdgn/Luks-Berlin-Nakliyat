@@ -29,9 +29,17 @@ function Testimonials({ items, eyebrow, title }) {
       <div className="cts-quote">”</div>
 
       <div key={i} className={`cts-slide ${enter}`}>
-        <p className="cts-body" style={{ margin: 0 }}>
-          {t.text}
-        </p>
+        {t.text ? (
+          <p className="cts-body" style={{ margin: 0 }}>
+            {t.text}
+          </p>
+        ) : null}
+
+        {t.rating ? (
+          <div className="cts-rating" aria-label={`${t.rating} / 5`}>
+            {'★'.repeat(t.rating)}
+          </div>
+        ) : null}
 
         <div className="cts-author-row">
           <div>
@@ -62,15 +70,14 @@ function Testimonials({ items, eyebrow, title }) {
   );
 }
 
-/* ===== Right: CTA odaklı panel (Ara / WhatsApp / E-posta) ===== */
-function CtaPanel({ phoneE164, whatsappE164, email, copy }) {
+/* ===== Right: CTA odaklı panel (Ara / WhatsApp) ===== */
+function CtaPanel({ phoneE164, whatsappE164, copy, eyebrow, chips }) {
   const telHref = `tel:${(phoneE164 || "").replace(/\s/g, "")}`;
   const waHref = `https://wa.me/${(whatsappE164 || "").replace(/\D/g, "")}`;
-  const mailHref = email ? `mailto:${email}` : "#";
 
   return (
     <div className="cts-cta-card">
-      <div className="cts-eyebrow">{copy?.eyebrow}</div>
+      <div className="cts-eyebrow">{eyebrow}</div>
       <h2 className="cts-title">{copy?.title}</h2>
 
       <p className="cts-lead">{copy?.subtitle}</p>
@@ -87,18 +94,14 @@ function CtaPanel({ phoneE164, whatsappE164, email, copy }) {
         >
           <span>{copy?.whatsapp}</span>
         </a>
-        <a className="cts-btn cts-btn-mail" href={mailHref}>
-          <span>{copy?.mail}</span>
-        </a>
       </div>
 
       <div className="cts-small">
         <div className="cts-chips">
           <span className="cts-chip">☎ {phoneE164}</span>
-          {email ? <span className="cts-chip">✉ {email}</span> : null}
-          {copy?.chips?.hours ? <span className="cts-chip">🕘 {copy.chips.hours}</span> : null}
-          {copy?.chips?.coverage ? (
-            <span className="cts-chip">📍 {copy.chips.coverage}</span>
+          {chips?.hours ? <span className="cts-chip">🕘 {chips.hours}</span> : null}
+          {chips?.coverage ? (
+            <span className="cts-chip">📍 {chips.coverage}</span>
           ) : null}
         </div>
       </div>
@@ -109,13 +112,15 @@ function CtaPanel({ phoneE164, whatsappE164, email, copy }) {
 /* ===== Section Wrapper ===== */
 export default function ContactTestimonialsSection({
   backgroundUrl = bgContact,
-  phoneE164 = "+49 30 000000",
-  whatsappE164 = "+49 30 000000",
-  email = "info@luksberlinnakliyat.com",
+  phoneE164 = "+90 541 596 54 91",
+  whatsappE164 = "+90 541 596 54 91"
 }) {
   const { t } = useTranslation();
   const copy = t("contactTestimonials", { returnObjects: true }) || {};
   const testimonials = copy.testimonials || [];
+  const ctaCopy = copy.cta || {};
+  const ctaEyebrow = ctaCopy.eyebrow || copy.ctaEyebrow || copy.eyebrow;
+  const chips = copy.chips || {};
 
   return (
     <section
@@ -134,8 +139,9 @@ export default function ContactTestimonialsSection({
           <CtaPanel
             phoneE164={phoneE164}
             whatsappE164={whatsappE164}
-            email={email}
-            copy={{ ...copy.cta, eyebrow: copy.eyebrow, chips: copy.chips }}
+            copy={ctaCopy}
+            eyebrow={ctaEyebrow}
+            chips={chips}
           />
         </div>
       </div>

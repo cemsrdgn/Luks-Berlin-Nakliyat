@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
+import mainLogo from '../assets/logo/mainLogo.png';
 import './navbar.css';
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
     { key: 'contact', translation: 'navbar.contact', to: '/contact' }
   ];
 
-  const whatsappNumber = '+905551234567';
+  const whatsappNumber = '+90 541 596 54 91';
   const phoneLabel = t('topbar.phone');
   const addressLabel = t('topbar.address');
   const trustItems = t('navbar.trust.items', { returnObjects: true });
@@ -42,21 +43,23 @@ const Navbar = () => {
 
   const closeMenu = () => setMenuOpen(false);
 
-  const brandLabel = `${brandPrimary} ${brandSecondary}`.trim();
-
   const handleLanguageToggle = (checked) => {
     i18n.changeLanguage(checked ? 'en' : 'tr');
   };
 
   return (
     <nav className={`navbar ${menuOpen ? 'navbar--open' : ''}`}>
-      <div className="nav-mobile-brand" aria-label={brandLabel}>
-        <div className="nav-mobile-brand-title">
+      <div className="nav-mobile-brand" aria-label={`${brandPrimary} ${brandSecondary}`}>
+        <div className="nav-mobile-brand-logo">
+          <img src={mainLogo} alt={`${brandPrimary} ${brandSecondary}`} />
+        </div>
+        <div className="nav-mobile-brand-copy">
           <span className="nav-mobile-brand-primary">{brandPrimary}</span>
           <span className="nav-mobile-brand-secondary">{brandSecondary}</span>
+          {brandTagline ? <span className="nav-mobile-brand-tagline">{brandTagline}</span> : null}
         </div>
-        {brandTagline && <span className="nav-mobile-brand-tagline">{brandTagline}</span>}
       </div>
+
       <button
         type="button"
         className={`navbar-toggle ${menuOpen ? 'open' : ''}`}
@@ -71,9 +74,10 @@ const Navbar = () => {
 
       <div className={`nav-panel ${menuOpen ? 'open' : ''}`}>
         <div className="nav-panel-header">
-          <div className="nav-panel-title" aria-label={brandLabel}>
-            <span>{brandPrimary}</span>
-            <span>{brandSecondary}</span>
+          <div className="nav-panel-brand">
+            <span className="nav-panel-brand-primary">{brandPrimary}</span>
+            <span className="nav-panel-brand-secondary">{brandSecondary}</span>
+            {brandTagline ? <span className="nav-panel-brand-tagline">{brandTagline}</span> : null}
           </div>
           <button
             type="button"
@@ -86,19 +90,19 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul className="nav-menu">
-          {menuItems.map((item) => (
-            <li key={item.key} className="nav-item">
+      <ul className="nav-menu">
+        {menuItems.map((item) => (
+          <li key={item.key} className="nav-item">
               <NavLink
                 to={item.to}
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeMenu}
-              >
-                {t(item.translation)}
+            >
+              {t(item.translation)}
               </NavLink>
-            </li>
-          ))}
-        </ul>
+          </li>
+        ))}
+      </ul>
 
         <div className="nav-panel-contact">
           <a

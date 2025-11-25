@@ -13,6 +13,13 @@ const GalleryPage = () => {
 
   const [activeTab, setActiveTab] = useState('photos');
   const [lightbox, setLightbox] = useState({ open: false, index: 0 });
+  const tabs = galleryMedia.hideVideos ? ['photos'] : ['photos', 'videos'];
+
+  useEffect(() => {
+    if (galleryMedia.hideVideos) {
+      setActiveTab('photos');
+    }
+  }, [galleryMedia.hideVideos]);
 
   const mediaList = useMemo(() => {
     const list = galleryMedia[activeTab] || [];
@@ -94,7 +101,7 @@ const GalleryPage = () => {
       </section>
 
       <div className="gallery-tabs">
-        {['photos', 'videos'].map((key) => (
+        {tabs.map((key) => (
           <button
             key={key}
             type="button"
@@ -138,19 +145,21 @@ const GalleryPage = () => {
           </button>
           <div className="gallery-lightbox-content">
             {activeMedia.type === 'video' ? (
-              <video
-                src={activeMedia.src}
-                poster={activeMedia.thumbnail}
-                controls
-                autoPlay
-              />
+              <>
+                <video
+                  src={activeMedia.src}
+                  poster={activeMedia.thumbnail}
+                  controls
+                  autoPlay
+                />
+                <div className="gallery-lightbox-caption">
+                  <h3>{activeMedia.title}</h3>
+                  {activeMedia.location && <p>{activeMedia.location}</p>}
+                </div>
+              </>
             ) : (
-              <img src={activeMedia.src} alt={activeMedia.title} />
+              <img src={activeMedia.src} alt="" />
             )}
-            <div className="gallery-lightbox-caption">
-              <h3>{activeMedia.title}</h3>
-              {activeMedia.location && <p>{activeMedia.location}</p>}
-            </div>
           </div>
         </div>
       ) : null}

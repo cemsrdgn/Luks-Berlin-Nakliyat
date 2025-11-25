@@ -3,13 +3,13 @@
   "name": "Lüks Berlin Nakliyat",
   "icons": [
     {
-      "src": "images/gallery/1.jpg",
-      "type": "image/jpeg",
+      "src": "assets/logo/mainLogo.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/gallery/2.jpg",
-      "type": "image/jpeg",
+      "src": "assets/logo/mainLogo.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
