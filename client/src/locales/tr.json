@@ -28,20 +28,28 @@
   "hero": {
     "slides": [
       {
-        "title": "Profesyonel Nakliye Ağı",
-        "subtitle": "Paketlemeden asansörlü yüklemeye kadar her adımı kendi ekibimiz yönetir."
+        "title": "Evden Eve Nakliyat",
+        "subtitle": "Ankara ve çevresinde güvenli, hızlı ve profesyonel ev taşıma hizmetleri"
       },
       {
-        "title": "Evden Eve Taşımacılık",
-        "subtitle": "Adresinize gelmeden önce kat, asansör ve park detaylarını planlıyoruz."
+        "title": "Profesyonel Taşımacılık Ağı",
+        "subtitle": "Geniş araç filosu ve deneyimli ekibimizle her türlü taşıma ihtiyacınızı karşılıyoruz"
       },
       {
-        "title": "Proje Taşımacılığı",
-        "subtitle": "Ağır ekipman, fuar ve stand lojistiğinde takip edilen araç filomuzla yanınızdayız."
+        "title": "Büro ve Ofis Taşımacılığı",
+        "subtitle": "Ofis eşyalarınızı zarar görmeden, planlı ve hızlı şekilde yeni adresinize taşıyoruz"
       },
       {
-        "title": "Güvenilir Transfer Çözümleri",
-        "subtitle": "Sözleşmeli SLA, şeffaf fiyatlandırma ve çok dilli koordinatörler."
+        "title": "Güvenilir Taşıma Çözümleri",
+        "subtitle": "Sigortalı taşımacılık, şeffaf fiyatlandırma ve çok dilli müşteri desteği"
+      },
+      {
+        "title": "Ekspertiz Hizmetleri",
+        "subtitle": "Eşya değerleme, hasar tespiti ve sigorta işlemlerinde uzman ekibimiz yanınızda"
+      },
+      {
+        "title": "Uygun Fiyatlı Hizmet",
+        "subtitle": "Kaliteli hizmeti uygun fiyatlarla sunuyoruz, özel paketler ve esnek ödeme seçenekleri"
       }
     ],
     "servicesButton": "HİZMETLERİMİZ"
@@ -200,7 +208,7 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "HAKKIMIZDA",
-      "title": "İstanbul'dan Türkiye'ye Uzanan Güvenilir Taşıma Deneyimi",
+      "title": "Ankara'dan Türkiye'ye Uzanan Güvenilir Taşıma Deneyimi",
       "subtitle": "1994'ten bu yana yılların verdiği deneyim ve tecrübe ile kaliteli hizmet sunuyoruz. Modern araç filomuz ve tecrübeli ekibimizle taşınmanın her aşamasında yanınızdayız.",
       "background": "images/background_logistic_truck.jpg"
     },

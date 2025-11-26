@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import WhatsAppStickyButton from '../components/WhatsAppStickyButton';
 import '../App.css';
 
 const SiteLayout = () => (
@@ -13,6 +14,7 @@ const SiteLayout = () => (
       <Outlet />
     </main>
     <Footer />
+    <WhatsAppStickyButton />
   </div>
 );
 

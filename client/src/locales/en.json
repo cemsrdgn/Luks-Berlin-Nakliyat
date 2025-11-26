@@ -28,20 +28,28 @@
   "hero": {
     "slides": [
       {
-        "title": "Professional Courier Network",
-        "subtitle": "Packing, lift-assisted loading and insurance managed by our in-house experts."
-      },
-      {
         "title": "House to House Moving",
-        "subtitle": "We plan every floor, elevator and parking detail before arriving at your address."
+        "subtitle": "Safe, fast and professional home moving services in Ankara and surrounding areas"
       },
       {
-        "title": "Project Transportation",
-        "subtitle": "Heavy machinery, stand & fair logistics with tracked vehicles and permits."
+        "title": "Professional Transportation Network",
+        "subtitle": "We meet all your transportation needs with our extensive vehicle fleet and experienced team"
       },
       {
-        "title": "Reliable Transfer Solutions",
-        "subtitle": "Contract-based SLA, transparent pricing and multilingual coordinators."
+        "title": "Office and Business Moving",
+        "subtitle": "We move your office furniture to your new address safely, planned and quickly"
+      },
+      {
+        "title": "Reliable Transportation Solutions",
+        "subtitle": "Insured transportation, transparent pricing and multilingual customer support"
+      },
+      {
+        "title": "Expertise Services",
+        "subtitle": "Our expert team is with you in property valuation, damage assessment and insurance procedures"
+      },
+      {
+        "title": "Affordable Service",
+        "subtitle": "We offer quality service at affordable prices, special packages and flexible payment options"
       }
     ],
     "servicesButton": "OUR SERVICES"
@@ -200,7 +208,7 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "ABOUT US",
-      "title": "Trusted Moving Experience From Istanbul Across Turkey",
+      "title": "Trusted Moving Experience From Ankara Across Turkey",
       "subtitle": "Since 1994, we've been delivering quality service with years of experience and expertise. Our modern fleet and experienced team stand by your side at every stage of your move.",
       "background": "images/background_logistic_truck.jpg"
     },
